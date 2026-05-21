@@ -118,7 +118,7 @@ Raw data sourced from the official F1 live timing API via FastF1.
 
 ## Portfolio Page
 
-A full interactive portfolio webpage for this project is included in the `web/` folder. Open `web/index.html` in any browser to view it locally.
+A full interactive portfolio webpage for this project is included in the `web/` folder. Open `web/portfolio_website.html` in any browser to view it locally.
 
 ## Author
 
