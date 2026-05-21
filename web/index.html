@@ -36,7 +36,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -49,7 +48,6 @@
 
     .container { width: 90%; max-width: 1300px; margin: auto; position: relative; z-index: 1; }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -93,7 +91,6 @@
 
     .nav-links a:hover { color: var(--text); }
 
-    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -112,7 +109,6 @@
         radial-gradient(ellipse 40% 60% at 60% 50%, rgba(255,128,0,0.06), transparent);
     }
 
-    /* Racing stripe accent */
     .hero::after {
       content: '';
       position: absolute;
@@ -215,8 +211,6 @@
     }
     .btn-primary3:hover { background: #e08f42; transform: translateY(-2px); }
     
-
-    /* Hero KPI cards */
     .hero-kpis { display: flex; flex-direction: column; gap: 16px; }
 
     .kpi-card {
@@ -265,7 +259,6 @@
       margin-top: 6px;
     }
 
-    /* ── SECTION BASE ── */
     section { padding: 100px 0; }
 
     .section-tag {
@@ -295,7 +288,6 @@
       margin-bottom: 60px;
     }
 
-    /* ── OVERVIEW STATS ── */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -327,7 +319,6 @@
 
     .stat-box p { color: var(--muted); font-size: 0.95rem; }
 
-    /* ── PIPELINE ── */
     .pipeline-section { background: var(--bg2); }
 
     .pipeline {
@@ -378,7 +369,6 @@
       color: var(--muted);
     }
 
-    /* Hover popup */
     .step-popup {
       display: none;
       position: absolute;
@@ -437,7 +427,6 @@
       font-size: 0.75rem;
     }
 
-    /* ── CHARTS ── */
     .charts-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -477,7 +466,6 @@
 
     .chart-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
-    /* ── CODE SECTION ── */
     .code-section { background: var(--bg2); }
 
     .code-tabs {
@@ -578,7 +566,6 @@
       white-space: pre;
     }
 
-    /* Syntax colors */
     .kw { color: #ff7b72; }       /* keywords */
     .fn { color: #d2a8ff; }       /* functions */
     .st { color: #a5d6ff; }       /* strings */
@@ -586,7 +573,6 @@
     .nm { color: #79c0ff; }       /* numbers */
     .bi { color: #ffa657; }       /* builtins */
 
-    /* ── INSIGHTS ── */
     .insights-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -640,7 +626,6 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* ── TECH STACK ── */
     .tech-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -665,7 +650,6 @@
     .tech-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
     .tech-card p { font-size: 0.82rem; color: var(--muted); }
 
-    /* ── ABOUT ── */
     .about-section { background: var(--bg2); }
 
     .about-grid {
@@ -815,7 +799,6 @@
       border-color: rgba(54,113,198,0.4);
     }
 
-    /* Project cards in about */
     .other-projects {
       display: flex;
       flex-direction: column;
@@ -860,7 +843,6 @@
       color: var(--muted);
     }
 
-    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 50px 0;
@@ -881,7 +863,6 @@
       margin-bottom: 0;
     }
 
-    /* ── MODAL ── */
     .modal {
       display: none;
       position: fixed;
@@ -912,7 +893,6 @@
       line-height: 1;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 1100px) {
       .hero h1 { font-size: 5rem; }
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -934,7 +914,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="container nav-inner">
     <a href="#" class="nav-logo">F1 <span>//</span> Red Bull Analysis</a>
@@ -949,7 +928,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="container hero-grid">
@@ -998,7 +976,6 @@
   </div>
 </section>
 
-<!-- OVERVIEW -->
 <section id="overview">
   <div class="container">
     <div class="section-tag">Project Overview</div>
@@ -1028,7 +1005,6 @@
   </div>
 </section>
 
-<!-- PIPELINE -->
 <section id="pipeline" class="pipeline-section">
   <div class="container">
     <div class="section-tag">Methodology</div>
@@ -1130,7 +1106,6 @@
   </div>
 </section>
 
-<!-- CHARTS -->
 <section id="charts">
   <div class="container">
     <div class="section-tag">Visualizations</div>
@@ -1225,7 +1200,6 @@
   </div>
 </section>
 
-<!-- CODE -->
 <section id="code" class="code-section" style="padding: 40px 0;">
   <div class="container">
     <div class="section-tag">Source Code</div>
@@ -1316,7 +1290,6 @@ all_race_results = []
       </div>
     </div>
 
-    <!-- CLEANING -->
     <div class="code-panel" id="tab-cleaning">
       <div class="code-header">
         <span class="code-filename"><span>02_data_cleaning.py</span> — removed nulls, fixed types, standardized teams and some basic feature engineering</span>
@@ -1388,7 +1361,6 @@ df.<span class="fn">to_csv</span>(<span class="st">"data/cleaned/master_results_
       </div>
     </div>
 
-    <!-- EDA -->
     <div class="code-panel" id="tab-eda">
       <div class="code-header">
         <span class="code-filename"><span>03_eda.py</span> — charts displaying wins, constructor points, Red Bull dominance metrics and cumulative points</span>
@@ -1466,7 +1438,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/04_cumulati
       </div>
     </div>
 
-    <!-- ADVANCED -->
     <div class="code-panel" id="tab-advanced">
       <div class="code-header">
         <span class="code-filename"><span>04_advanced_analysis.py</span> — charts showing driver battles, Verstappen finishes heatmap, position change scatterplot and driver consistency boxplot</span>
@@ -1557,7 +1528,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
   </div>
 </section>
 
-<!-- INSIGHTS -->
 <section id="insights">
   <div class="container">
     <div class="section-tag">Key Findings</div>
@@ -1614,7 +1584,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
   </div>
 </section>
 
-<!-- TECH STACK -->
 <section>
   <div class="container">
     <div class="section-tag">Tools Used</div>
@@ -1666,7 +1635,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="about-section">
   <div class="container">
     <div class="section-tag">About</div>
@@ -1788,7 +1756,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
   </div>
 </section>
 
-<!-- FOOTER -->
 <div class="footer-stripe"></div>
 <footer>
   <div class="container footer-inner">
@@ -1798,14 +1765,12 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
   </div>
 </footer>
 
-<!-- MODAL -->
 <div class="modal" id="modal">
   <button class="modal-close" id="modal-close">&times;</button>
   <img id="modal-img" src="" alt="">
 </div>
 
 <script>
-  // ── IMAGE MODAL ──
   const modal     = document.getElementById('modal');
   const modalImg  = document.getElementById('modal-img');
   const modalClose= document.getElementById('modal-close');
@@ -1822,7 +1787,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
 
-  // ── CODE TABS ──
   function switchTab(name) {
     document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.code-panel').forEach(p => p.classList.remove('active'));
@@ -1831,7 +1795,6 @@ plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_c
     event.target.classList.add('active');
   }
 
-  // ── COPY CODE ──
   function copyCode(name) {
     const pre  = document.getElementById('code-' + name);
     const text = pre.innerText;
