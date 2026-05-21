@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,1.0,1,1.0,,,,0 days 01:46:37.418000,Finished,25.0,62.0,2023,15,Singapore Grand Prix,Singapore
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,2.0,2,4.0,,,,0 days 00:00:00.812000,Finished,18.0,62.0,2023,15,Singapore Grand Prix,Singapore
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,3.0,3,5.0,,,,0 days 00:00:01.269000,Finished,16.0,62.0,2023,15,Singapore Grand Prix,Singapore
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,4.0,4,3.0,,,,0 days 00:00:21.177000,Finished,12.0,62.0,2023,15,Singapore Grand Prix,Singapore
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,5.0,5,11.0,,,,0 days 00:00:21.441000,Finished,10.0,62.0,2023,15,Singapore Grand Prix,Singapore
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,6.0,6,12.0,,,,0 days 00:00:38.441000,Finished,8.0,62.0,2023,15,Singapore Grand Prix,Singapore
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,7.0,7,17.0,,,,0 days 00:00:41.479000,Finished,6.0,62.0,2023,15,Singapore Grand Prix,Singapore
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,8.0,8,13.0,,,,0 days 00:00:59.534000,Finished,4.0,62.0,2023,15,Singapore Grand Prix,Singapore
+40,,LAW,lawson,AlphaTauri,,alphatauri,Liam,Lawson,Liam Lawson,,,9.0,9,10.0,,,,0 days 00:01:05.918000,Finished,2.0,62.0,2023,15,Singapore Grand Prix,Singapore
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,10.0,10,6.0,,,,0 days 00:01:12.116000,Finished,1.0,62.0,2023,15,Singapore Grand Prix,Singapore
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,11.0,11,14.0,,,,0 days 00:01:13.417000,Finished,0.0,62.0,2023,15,Singapore Grand Prix,Singapore
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,12.0,12,19.0,,,,0 days 00:01:23.649000,Finished,0.0,62.0,2023,15,Singapore Grand Prix,Singapore
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,13.0,13,9.0,,,,0 days 00:01:26.201000,Finished,0.0,62.0,2023,15,Singapore Grand Prix,Singapore
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,14.0,14,18.0,,,,0 days 00:01:26.889000,Finished,0.0,62.0,2023,15,Singapore Grand Prix,Singapore
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,15.0,15,7.0,,,,0 days 00:01:27.603000,Finished,0.0,62.0,2023,15,Singapore Grand Prix,Singapore
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,16.0,16,2.0,,,,,Retired,0.0,61.0,2023,15,Singapore Grand Prix,Singapore
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,17.0,R,16.0,,,,,Retired,0.0,51.0,2023,15,Singapore Grand Prix,Singapore
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,18.0,R,8.0,,,,,Retired,0.0,42.0,2023,15,Singapore Grand Prix,Singapore
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,19.0,R,15.0,,,,,Retired,0.0,0.0,2023,15,Singapore Grand Prix,Singapore
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,20.0,W,0.0,,,,,Withdrew,0.0,0.0,2023,15,Singapore Grand Prix,Singapore

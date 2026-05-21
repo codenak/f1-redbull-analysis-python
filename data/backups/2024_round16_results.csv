@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,1.0,1,4.0,,,,0 days 01:14:40.727000,Finished,25.0,53.0,2024,16,Italian Grand Prix,Italy
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,2.0,2,2.0,,,,0 days 00:00:02.664000,Finished,18.0,53.0,2024,16,Italian Grand Prix,Italy
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,3.0,3,1.0,,,,0 days 00:00:06.153000,Finished,16.0,53.0,2024,16,Italian Grand Prix,Italy
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,4.0,4,5.0,,,,0 days 00:00:15.621000,Finished,12.0,53.0,2024,16,Italian Grand Prix,Italy
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,5.0,5,6.0,,,,0 days 00:00:22.820000,Finished,10.0,53.0,2024,16,Italian Grand Prix,Italy
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,6.0,6,7.0,,,,0 days 00:00:37.932000,Finished,8.0,53.0,2024,16,Italian Grand Prix,Italy
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,7.0,7,3.0,,,,0 days 00:00:39.715000,Finished,6.0,53.0,2024,16,Italian Grand Prix,Italy
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,8.0,8,8.0,,,,0 days 00:00:54.148000,Finished,4.0,53.0,2024,16,Italian Grand Prix,Italy
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,9.0,9,9.0,,,,0 days 00:01:07.456000,Finished,2.0,53.0,2024,16,Italian Grand Prix,Italy
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,10.0,10,13.0,,,,0 days 00:01:08.302000,Finished,1.0,53.0,2024,16,Italian Grand Prix,Italy
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,11.0,11,11.0,,,,0 days 00:01:08.495000,Finished,0.0,53.0,2024,16,Italian Grand Prix,Italy
+43,,COL,colapinto,Williams,,williams,Franco,Colapinto,Franco Colapinto,,,12.0,12,18.0,,,,0 days 00:01:21.308000,Finished,0.0,53.0,2024,16,Italian Grand Prix,Italy
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,13.0,13,12.0,,,,0 days 00:01:33.452000,Finished,0.0,53.0,2024,16,Italian Grand Prix,Italy
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,14.0,14,15.0,,,,0 days 00:00:12.659000,Lapped,0.0,52.0,2024,16,Italian Grand Prix,Italy
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,15.0,15,14.0,,,,0 days 00:00:18.344000,Lapped,0.0,52.0,2024,16,Italian Grand Prix,Italy
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,16.0,16,19.0,,,,0 days 00:00:27.211000,Lapped,0.0,52.0,2024,16,Italian Grand Prix,Italy
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,17.0,17,10.0,,,,0 days 00:00:30.870000,Lapped,0.0,52.0,2024,16,Italian Grand Prix,Italy
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,18.0,18,20.0,,,,0 days 00:00:40.055000,Lapped,0.0,52.0,2024,16,Italian Grand Prix,Italy
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,19.0,19,17.0,,,,0 days 00:00:43.508000,Lapped,0.0,52.0,2024,16,Italian Grand Prix,Italy
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,20.0,R,16.0,,,,,Retired,0.0,7.0,2024,16,Italian Grand Prix,Italy

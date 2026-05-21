@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,1.0,,,,0 days 01:30:58.421000,Finished,26.0,53.0,2023,16,Japanese Grand Prix,Japan
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,2.0,2,3.0,,,,0 days 00:00:19.387000,Finished,18.0,53.0,2023,16,Japanese Grand Prix,Japan
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,3.0,3,2.0,,,,0 days 00:00:36.494000,Finished,15.0,53.0,2023,16,Japanese Grand Prix,Japan
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,4.0,4,4.0,,,,0 days 00:00:43.998000,Finished,12.0,53.0,2023,16,Japanese Grand Prix,Japan
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,5.0,5,7.0,,,,0 days 00:00:49.376000,Finished,10.0,53.0,2023,16,Japanese Grand Prix,Japan
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,6.0,6,6.0,,,,0 days 00:00:50.221000,Finished,8.0,53.0,2023,16,Japanese Grand Prix,Japan
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,7.0,7,8.0,,,,0 days 00:00:57.659000,Finished,6.0,53.0,2023,16,Japanese Grand Prix,Japan
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,8.0,8,10.0,,,,0 days 00:01:14.725000,Finished,4.0,53.0,2023,16,Japanese Grand Prix,Japan
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,9.0,9,14.0,,,,0 days 00:01:19.678000,Finished,2.0,53.0,2023,16,Japanese Grand Prix,Japan
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,10.0,10,12.0,,,,0 days 00:01:23.155000,Finished,1.0,53.0,2023,16,Japanese Grand Prix,Japan
+40,,LAW,lawson,AlphaTauri,,alphatauri,Liam,Lawson,Liam Lawson,,,11.0,11,11.0,,,,0 days 00:00:03.089000,Lapped,0.0,52.0,2023,16,Japanese Grand Prix,Japan
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,12.0,12,9.0,,,,0 days 00:00:03.974000,Lapped,0.0,52.0,2023,16,Japanese Grand Prix,Japan
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,13.0,13,19.0,,,,0 days 00:00:06.340000,Lapped,0.0,52.0,2023,16,Japanese Grand Prix,Japan
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,14.0,14,18.0,,,,0 days 00:00:09.598000,Lapped,0.0,52.0,2023,16,Japanese Grand Prix,Japan
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,15.0,15,15.0,,,,0 days 00:00:29.570000,Lapped,0.0,52.0,2023,16,Japanese Grand Prix,Japan
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,16.0,R,13.0,,,,,Retired,0.0,26.0,2023,16,Japanese Grand Prix,Japan
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,17.0,R,20.0,,,,,Retired,0.0,22.0,2023,16,Japanese Grand Prix,Japan
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,18.0,R,17.0,,,,,Retired,0.0,20.0,2023,16,Japanese Grand Prix,Japan
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,19.0,R,5.0,,,,,Retired,0.0,15.0,2023,16,Japanese Grand Prix,Japan
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,20.0,R,16.0,,,,,Retired,0.0,7.0,2023,16,Japanese Grand Prix,Japan

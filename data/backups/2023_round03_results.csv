@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,1.0,,,,0 days 02:32:38.371000,Finished,25.0,58.0,2023,3,Australian Grand Prix,Australia
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,2.0,2,3.0,,,,0 days 00:00:00.179000,Finished,18.0,58.0,2023,3,Australian Grand Prix,Australia
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,3.0,3,4.0,,,,0 days 00:00:00.769000,Finished,15.0,58.0,2023,3,Australian Grand Prix,Australia
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,4.0,4,6.0,,,,0 days 00:00:03.082000,Finished,12.0,58.0,2023,3,Australian Grand Prix,Australia
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,5.0,5,20.0,,,,0 days 00:00:03.320000,Finished,11.0,58.0,2023,3,Australian Grand Prix,Australia
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,6.0,6,13.0,,,,0 days 00:00:03.701000,Finished,8.0,58.0,2023,3,Australian Grand Prix,Australia
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,7.0,7,10.0,,,,0 days 00:00:04.939000,Finished,6.0,58.0,2023,3,Australian Grand Prix,Australia
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,8.0,8,16.0,,,,0 days 00:00:05.382000,Finished,4.0,58.0,2023,3,Australian Grand Prix,Australia
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,9.0,9,17.0,,,,0 days 00:00:05.713000,Finished,2.0,58.0,2023,3,Australian Grand Prix,Australia
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,10.0,10,12.0,,,,0 days 00:00:06.052000,Finished,1.0,58.0,2023,3,Australian Grand Prix,Australia
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,11.0,11,19.0,,,,0 days 00:00:06.513000,Finished,0.0,58.0,2023,3,Australian Grand Prix,Australia
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,12.0,12,5.0,,,,0 days 00:00:06.594000,Finished,0.0,58.0,2023,3,Australian Grand Prix,Australia
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,13.0,13,9.0,,,,,Retired,0.0,56.0,2023,3,Australian Grand Prix,Australia
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,14.0,14,11.0,,,,,Retired,0.0,56.0,2023,3,Australian Grand Prix,Australia
+21,,DEV,de_vries,AlphaTauri,,alphatauri,Nyck,de Vries,Nyck de Vries,,,15.0,15,15.0,,,,,Retired,0.0,56.0,2023,3,Australian Grand Prix,Australia
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,16.0,16,18.0,,,,,Retired,0.0,56.0,2023,3,Australian Grand Prix,Australia
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,17.0,17,14.0,,,,,Retired,0.0,52.0,2023,3,Australian Grand Prix,Australia
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,18.0,R,2.0,,,,,Retired,0.0,17.0,2023,3,Australian Grand Prix,Australia
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,19.0,R,8.0,,,,,Retired,0.0,6.0,2023,3,Australian Grand Prix,Australia
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,20.0,R,7.0,,,,,Retired,0.0,0.0,2023,3,Australian Grand Prix,Australia

@@ -1,0 +1,20 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,1.0,1,2.0,,,,0 days 01:20:26.843000,Finished,25.0,58.0,2024,3,Australian Grand Prix,Australia
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,2.0,2,4.0,,,,0 days 00:00:02.366000,Finished,19.0,58.0,2024,3,Australian Grand Prix,Australia
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,3.0,3,3.0,,,,0 days 00:00:05.904000,Finished,15.0,58.0,2024,3,Australian Grand Prix,Australia
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,4.0,4,5.0,,,,0 days 00:00:35.770000,Finished,12.0,58.0,2024,3,Australian Grand Prix,Australia
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,5.0,5,6.0,,,,0 days 00:00:56.309000,Finished,10.0,58.0,2024,3,Australian Grand Prix,Australia
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,6.0,6,9.0,,,,0 days 00:01:33.222000,Finished,8.0,58.0,2024,3,Australian Grand Prix,Australia
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,7.0,7,8.0,,,,0 days 00:01:35.601000,Finished,6.0,58.0,2024,3,Australian Grand Prix,Australia
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,8.0,8,10.0,,,,0 days 00:01:40.992000,Finished,4.0,58.0,2024,3,Australian Grand Prix,Australia
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,9.0,9,16.0,,,,0 days 00:01:44.553000,Finished,2.0,58.0,2024,3,Australian Grand Prix,Australia
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,10.0,10,14.0,,,,0 days 00:00:04.081000,Lapped,1.0,57.0,2024,3,Australian Grand Prix,Australia
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,11.0,11,12.0,,,,0 days 00:00:05.009000,Lapped,0.0,57.0,2024,3,Australian Grand Prix,Australia
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,12.0,12,18.0,,,,0 days 00:00:11.508000,Lapped,0.0,57.0,2024,3,Australian Grand Prix,Australia
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,13.0,13,17.0,,,,0 days 00:00:40.953000,Lapped,0.0,57.0,2024,3,Australian Grand Prix,Australia
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,14.0,14,13.0,,,,0 days 00:00:42.326000,Lapped,0.0,57.0,2024,3,Australian Grand Prix,Australia
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,15.0,15,19.0,,,,0 days 00:00:44.293000,Lapped,0.0,57.0,2024,3,Australian Grand Prix,Australia
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,16.0,16,15.0,,,,0 days 00:00:53.979000,Lapped,0.0,57.0,2024,3,Australian Grand Prix,Australia
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,17.0,17,7.0,,,,,Retired,0.0,56.0,2024,3,Australian Grand Prix,Australia
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,18.0,R,11.0,,,,,Retired,0.0,15.0,2024,3,Australian Grand Prix,Australia
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,19.0,R,1.0,,,,,Retired,0.0,3.0,2024,3,Australian Grand Prix,Australia

@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,1.0,,,,0 days 01:48:51.980000,Finished,25.0,78.0,2023,6,Monaco Grand Prix,Monaco
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,2.0,2,2.0,,,,0 days 00:00:27.921000,Finished,18.0,78.0,2023,6,Monaco Grand Prix,Monaco
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,3.0,3,3.0,,,,0 days 00:00:36.990000,Finished,15.0,78.0,2023,6,Monaco Grand Prix,Monaco
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,4.0,4,5.0,,,,0 days 00:00:39.062000,Finished,13.0,78.0,2023,6,Monaco Grand Prix,Monaco
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,5.0,5,8.0,,,,0 days 00:00:56.284000,Finished,10.0,78.0,2023,6,Monaco Grand Prix,Monaco
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,6.0,6,6.0,,,,0 days 00:01:01.890000,Finished,8.0,78.0,2023,6,Monaco Grand Prix,Monaco
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,7.0,7,7.0,,,,0 days 00:01:02.362000,Finished,6.0,78.0,2023,6,Monaco Grand Prix,Monaco
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,8.0,8,4.0,,,,0 days 00:01:03.391000,Finished,4.0,78.0,2023,6,Monaco Grand Prix,Monaco
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,9.0,9,10.0,,,,0 days 00:00:04.061000,Lapped,2.0,77.0,2023,6,Monaco Grand Prix,Monaco
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,10.0,10,11.0,,,,0 days 00:00:13.959000,Lapped,1.0,77.0,2023,6,Monaco Grand Prix,Monaco
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,11.0,11,15.0,,,,0 days 00:00:28.963000,Lapped,0.0,77.0,2023,6,Monaco Grand Prix,Monaco
+21,,DEV,de_vries,AlphaTauri,,alphatauri,Nyck,de Vries,Nyck de Vries,,,12.0,12,12.0,,,,0 days 00:00:57.317000,Lapped,0.0,77.0,2023,6,Monaco Grand Prix,Monaco
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,13.0,13,19.0,,,,0 days 00:01:11.852000,Lapped,0.0,77.0,2023,6,Monaco Grand Prix,Monaco
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,14.0,14,13.0,,,,0 days 00:01:19.210000,Lapped,0.0,77.0,2023,6,Monaco Grand Prix,Monaco
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,15.0,15,9.0,,,,0 days 00:00:07.545000,Lapped,0.0,76.0,2023,6,Monaco Grand Prix,Monaco
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,16.0,16,20.0,,,,0 days 00:00:49.024000,Lapped,0.0,76.0,2023,6,Monaco Grand Prix,Monaco
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,17.0,17,18.0,,,,0 days 00:00:58.506000,Lapped,0.0,76.0,2023,6,Monaco Grand Prix,Monaco
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,18.0,18,16.0,,,,0 days 00:01:17.983000,Lapped,0.0,76.0,2023,6,Monaco Grand Prix,Monaco
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,19.0,19,17.0,,,,,Retired,0.0,70.0,2023,6,Monaco Grand Prix,Monaco
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,20.0,R,14.0,,,,,Retired,0.0,53.0,2023,6,Monaco Grand Prix,Monaco

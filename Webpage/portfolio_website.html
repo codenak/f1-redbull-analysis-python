@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Red Bull Dominance Analysis — Shounak Mukherjee</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Barlow+Condensed:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rb-blue: #3671C6;
+      --rb-red: #E8002D;
+      --mclaren: #FF8000;
+      --ferrari: #E8002D;
+      --mercedes: #27F4D2;
+      --bg: #060608;
+      --bg2: #0d0d12;
+      --bg3: #13131a;
+      --border: #1e1e28;
+      --border2: #2a2a38;
+      --text: #f0f0f5;
+      --muted: #8888a0;
+      --muted2: #5a5a70;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    .container { width: 90%; max-width: 1300px; margin: auto; position: relative; z-index: 1; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(6,6,8,0.85);
+      backdrop-filter: blur(16px);
+      padding: 18px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--rb-blue); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 10% 20%, rgba(54,113,198,0.18), transparent),
+        radial-gradient(ellipse 50% 40% at 90% 80%, rgba(232,0,45,0.14), transparent),
+        radial-gradient(ellipse 40% 60% at 60% 50%, rgba(255,128,0,0.06), transparent);
+    }
+
+    /* Racing stripe accent */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--rb-blue), var(--rb-red), var(--mclaren));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: rgba(54,113,198,0.1);
+      border: 1px solid rgba(54,113,198,0.25);
+      margin-bottom: 28px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7aa8e8;
+    }
+
+    .pulse {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #00ff88;
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.4); }
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 .line2 {
+      background: linear-gradient(90deg, var(--rb-blue) 0%, var(--rb-red) 50%, var(--mclaren) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      padding: 14px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary1 {
+      background: var(--rb-blue);
+      color: white;
+    }
+    .btn-primary1:hover { background: #4d88dd; transform: translateY(-2px); }
+
+    .btn-primary2 {
+      background: var(--rb-red);
+      color: white;
+    }
+    .btn-primary2:hover { background: #ee4d4d; transform: translateY(-2px); }
+
+    .btn-primary3 {
+      background: #ffa500;
+      color: white;
+    }
+    .btn-primary3:hover { background: #e08f42; transform: translateY(-2px); }
+    
+
+    /* Hero KPI cards */
+    .hero-kpis { display: flex; flex-direction: column; gap: 16px; }
+
+    .kpi-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+    }
+
+    .kpi-card.blue::before { background: var(--rb-blue); }
+    .kpi-card.red::before { background: var(--rb-red); }
+    .kpi-card.orange::before { background: var(--mclaren); }
+
+    .kpi-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .kpi-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .kpi-card.blue .kpi-value { color: var(--rb-blue); }
+    .kpi-card.red .kpi-value { color: var(--rb-red); }
+    .kpi-card.orange .kpi-value { color: #ffa500; }
+
+    .kpi-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 100px 0; }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rb-blue);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 700px;
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+
+    /* ── OVERVIEW STATS ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 0;
+    }
+
+    .stat-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .stat-box:hover {
+      border-color: var(--rb-blue);
+      transform: translateY(-4px);
+    }
+
+    .stat-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--rb-blue);
+      margin-bottom: 8px;
+    }
+
+    .stat-box p { color: var(--muted); font-size: 0.95rem; }
+
+    /* ── PIPELINE ── */
+    .pipeline-section { background: var(--bg2); }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .pipeline-step {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      overflow: visible;
+    }
+
+    .pipeline-step:hover {
+      border-color: var(--rb-blue);
+      transform: translateY(-6px);
+      z-index: 10;
+    }
+
+    .step-num {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rb-blue), var(--rb-red));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .pipeline-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .pipeline-step .step-short {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Hover popup */
+    .step-popup {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      background: #1a1a26;
+      border: 1px solid var(--rb-blue);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: left;
+      z-index: 100;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+
+    .step-popup::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 8px solid transparent;
+      border-top-color: var(--rb-blue);
+    }
+
+    .pipeline-step:hover .step-popup { display: block; }
+
+    .step-popup h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #7aa8e8;
+    }
+
+    .step-popup ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .step-popup ul li {
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .step-popup ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--rb-blue);
+      font-size: 0.75rem;
+    }
+
+    /* ── CHARTS ── */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .chart-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .chart-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .chart-card img {
+      width: 100%;
+      display: block;
+      cursor: zoom-in;
+    }
+
+    .chart-info {
+      padding: 24px 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .chart-info h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .chart-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+    /* ── CODE SECTION ── */
+    .code-section { background: var(--bg2); }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 0;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      padding-bottom: 0;
+    }
+
+    .code-tab {
+      padding: 12px 20px;
+      border-radius: 10px 10px 0 0;
+      border: 1px solid transparent;
+      border-bottom: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all 0.2s;
+      position: relative;
+      bottom: -1px;
+    }
+
+    .code-tab:hover { color: var(--text); }
+
+    .code-tab.active {
+      background: var(--bg3);
+      border-color: var(--border);
+      border-bottom-color: var(--bg3);
+      color: var(--rb-blue);
+    }
+
+    .code-panel {
+      display: none;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 18px 18px;
+      overflow: hidden;
+    }
+
+    .code-panel.active { display: block; }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .code-filename {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .code-filename span { color: var(--rb-blue); }
+
+    .copy-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border2);
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover { border-color: var(--rb-blue); color: var(--rb-blue); }
+
+    .code-scroll {
+      max-height: 520px;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .code-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+    .code-scroll::-webkit-scrollbar-track { background: transparent; }
+    .code-scroll::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+    pre {
+      padding: 28px;
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      line-height: 1.75;
+      color: #c9d1d9;
+      white-space: pre;
+    }
+
+    /* Syntax colors */
+    .kw { color: #ff7b72; }       /* keywords */
+    .fn { color: #d2a8ff; }       /* functions */
+    .st { color: #a5d6ff; }       /* strings */
+    .cm { color: #8b949e; font-style: italic; } /* comments */
+    .nm { color: #79c0ff; }       /* numbers */
+    .bi { color: #ffa657; }       /* builtins */
+
+    /* ── INSIGHTS ── */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .insight-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 36px;
+      transition: all 0.3s;
+    }
+
+    .insight-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-3px);
+    }
+
+    .insight-num {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--rb-blue), var(--rb-red));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .insight-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .insight-card p { color: var(--muted); line-height: 1.7; }
+
+    .insight-stat {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(54,113,198,0.1);
+      border: 1px solid rgba(54,113,198,0.2);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #7aa8e8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── TECH STACK ── */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .tech-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .tech-card:hover {
+      border-color: var(--rb-blue);
+      transform: translateY(-3px);
+    }
+
+    .tech-icon { font-size: 2rem; margin-bottom: 12px; }
+    .tech-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .tech-card p { font-size: 0.82rem; color: var(--muted); }
+
+    /* ── ABOUT ── */
+    .about-section { background: var(--bg2); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-left {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .about-avatar {
+      width: 80px; height: 80px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--rb-blue), var(--rb-red));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+
+    .about-left h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .about-role {
+      color: var(--rb-blue);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .about-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .about-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .about-meta-item span:first-child { font-size: 1rem; }
+
+    .about-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .about-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .about-link:hover { border-color: var(--rb-blue); color: var(--text); }
+
+    .about-right h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      margin-top: 36px;
+    }
+
+    .about-right h3:first-child { margin-top: 0; }
+
+    .about-right p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .skill-tag {
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: rgba(54,113,198,0.08);
+      border: 1px solid rgba(54,113,198,0.18);
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: #7aa8e8;
+    }
+
+    .skill-tag a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .skill-tag a:hover {
+      opacity: 0.8;
+    }
+
+    .github-repo-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: rgba(54,113,198,0.08);
+      border: 1px solid rgba(54,113,198,0.18);
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: #7aa8e8;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-top: 28px;
+  }
+
+    .github-repo-btn:hover {
+      background: rgba(54,113,198,0.15);
+      border-color: rgba(54,113,198,0.4);
+    }
+
+    /* Project cards in about */
+    .other-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .proj-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: block;
+    }
+
+    .proj-card:hover { border-color: var(--border2); transform: translateX(4px); }
+
+    .proj-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .proj-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+
+    .proj-tags {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .proj-tag {
+      padding: 3px 10px;
+      border-radius: 4px;
+      background: var(--bg3);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 50px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-inner p { color: var(--muted2); font-size: 0.9rem; }
+
+    .footer-stripe {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rb-blue), var(--rb-red), var(--mclaren), var(--mercedes));
+      margin-bottom: 0;
+    }
+
+    /* ── MODAL ── */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(0,0,0,0.92);
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .modal.open { display: flex; }
+
+    .modal img {
+      max-width: 95%;
+      max-height: 90vh;
+      border-radius: 12px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 24px; right: 32px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .hero h1 { font-size: 5rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .pipeline { grid-template-columns: repeat(3, 1fr); }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-left { position: static; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+      .section-title { font-size: 2.5rem; }
+      .charts-grid, .insights-grid, .tech-grid { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">F1 <span>//</span> Red Bull Analysis</a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#charts">Charts</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+
+    <div>
+      <div class="hero-eyebrow">
+        <div class="pulse"></div>
+        Formula 1 · Data Analytics · Portfolio Project
+      </div>
+
+      <h1>
+        Red Bull<br>
+        <span class="line2">Dominance</span><br>
+        Analysis
+      </h1>
+
+      <p class="hero-desc">
+        A complete end-to-end Python analytics project telling the story of Red Bull Racing's historic 2023 dominance and the emergence of a multi-team championship fight in 2024. Built with FastF1, Pandas, Matplotlib, and Seaborn across 46 races and 919 data points.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#charts" class="btn btn-primary1">Explore Charts</a>
+        <a href="#code" class="btn btn-primary2">View Code</a>
+        <a href="#about" class="btn btn-primary3">About Me</a>
+      </div>
+    </div>
+
+    <div class="hero-kpis">
+      <div class="kpi-card blue">
+        <div class="kpi-label">2023 Red Bull Win Rate</div>
+        <div class="kpi-value">95.5%</div>
+        <div class="kpi-sub">21 wins from 22 races — historic dominance</div>
+      </div>
+      <div class="kpi-card red">
+        <div class="kpi-label">2024 Red Bull Win Rate</div>
+        <div class="kpi-value">37.5%</div>
+        <div class="kpi-sub">4 teams in championship race</div>
+      </div>
+      <div class="kpi-card orange">
+        <div class="kpi-label">Verstappen 2023 Points Per Race</div>
+        <div class="kpi-value">24.1</div>
+        <div class="kpi-sub">Down to 16.6 in 2024 — still champion</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="container">
+    <div class="section-tag">Project Overview</div>
+    <h2 class="section-title">What did i actually analyze ?</h2>
+    <p class="section-sub">
+      In this project I have covered two complete Formula 1 seasons — 2023 and 2024 — using race result data collected from the FastF1 API. The goal is to quantify Red Bull's dominance in 2023 and measure how the competitive landscape shifted in 2024.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <h3>46</h3>
+        <p>Total Races Analysed</p>
+      </div>
+      <div class="stat-box">
+        <h3>919</h3>
+        <p>Data Points Collected</p>
+      </div>
+      <div class="stat-box">
+        <h3>25</h3>
+        <p>Unique Drivers</p>
+      </div>
+      <div class="stat-box">
+        <h3>10</h3>
+        <p>Visualizations Built</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section id="pipeline" class="pipeline-section">
+  <div class="container">
+    <div class="section-tag">Methodology</div>
+    <h2 class="section-title">Analytics Pipeline</h2>
+    <p class="section-sub">
+      I followed a structured 5-phase workflow from raw API data to final insights to keep my analysis organized and my mind sane! Hover over each step to see exactly what I did.
+    </p>
+
+    <div class="pipeline">
+
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <h3>Data Collection</h3>
+        <p class="step-short">FastF1 API</p>
+        <div class="step-popup">
+          <h4>DATA COLLECTION</h4>
+          <ul>
+            <li>Used FastF1 library to connect to the official F1 live timing API</li>
+            <li>Stored the fetched data in a local disk cache to avoid repeated API calls</li>
+            <li>Collected race results for all 22 rounds of 2023 and 24 rounds of 2024</li>
+            <li>Built a loop that skips already-downloaded rounds on restart</li>
+            <li>Saved individual CSV backups after every race as a safety net</li>
+            <li>Handled API rate limits using time.sleep() delays between requests</li>
+            <li>Final dataset: 919 rows across 46 races</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <h3>Data Cleaning</h3>
+        <p class="step-short">Pandas</p>
+        <div class="step-popup">
+          <h4>DATA CLEANING</h4>
+          <ul>
+            <li>Dropped 8 fully null columns (BroadcastName, TeamColor, HeadshotUrl, Q1/Q2/Q3 etc.)</li>
+            <li>Renamed all 17 remaining columns to clean snake_case format</li>
+            <li>Fixed data types (positions to numeric, year/round to integer, etc.)</li>
+            <li>Standardised team names across seasons (Alfa Romeo to Sauber, AlphaTauri to RB F1 Team, etc.)</li>
+            <li>Fixed DNF detection logic (separated Retired/Accident from Lapped finishers)</li>
+            <li>Added DNS (Did Not Start) as a separate flag</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <h3>Feature Engineering</h3>
+        <p class="step-short">New KPIs</p>
+        <div class="step-popup">
+          <h4>FEATURE ENGINEERING</h4>
+          <ul>
+            <li>Created is_redbull boolean flag for quick Red Bull filtering</li>
+            <li>Calculated positions_gained = grid_position - finish_position</li>
+            <li>Added points_finish flag (True if points > 0)</li>
+            <li>Built finished, dnf, and dns boolean columns from status values</li>
+            <li>Computed win rate, podium rate, and points per race as derived KPIs</li>
+            <li>Calculated Red Bull points share as % of all points scored in season</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <h3>EDA</h3>
+        <p class="step-short">Matplotlib · Seaborn</p>
+        <div class="step-popup">
+          <h4>EXPLORATORY DATA ANALYSIS</h4>
+          <ul>
+            <li>Calculated wins per team by season (21 vs 9 for Red Bull)</li>
+            <li>Compared total constructor points (Red Bull 790 in 2023 but only 3rd in 2024)</li>
+            <li>Calculated Red Bull dominance metrics (win % and points share side by side)</li>
+            <li>Calculated cumulative constructor points race-by-race for top 5 teams</li>
+            <li>Summarized Verstappen stats  (wins, podiums, poles, DNFs, avg finish)</li>
+            <li>Analyzed DNF rate by team and season</li>
+            <li>Ranked top 10 driver points for both seasons</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <h3>Advanced Analysis</h3>
+        <p class="step-short">6 Deep-Dive Charts</p>
+        <div class="step-popup">
+          <h4>ADVANCED ANALYSIS</h4>
+          <ul>
+            <li>Compared cumulative driver points (Verstappen vs top 4 rivals across both seasons)</li>
+            <li>Calculated points gap to championship leader round-by-round</li>
+            <li>Created heatmap of Verstappen finishing position for every race in both seasons</li>
+            <li>Created simple win distribution pie chart</li>
+            <li>Plotted a grid vs finish scatter (Red Bull isolation vs field in 2023 vs 2024)</li>
+            <li>Plotted a driver consistency boxplot (Clear fall of Pérez and rise of Norris/Leclerc)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHARTS -->
+<section id="charts">
+  <div class="container">
+    <div class="section-tag">Visualizations</div>
+    <h2 class="section-title">Charts I Created</h2>
+    <p class="section-sub">
+      I generated each of these charts using Python after full data cleaning and feature engineering. Click any chart to expand it.
+    </p>
+
+    <div class="charts-grid">
+
+      <div class="chart-card">
+        <img src="charts/01_wins_by_team.png" alt="Wins By Team">
+        <div class="chart-info">
+          <h3>Race Wins by Team — 2023 vs 2024</h3>
+          <p>In 2023 Red Bull won 21 of 22 races. In 2024 the wins got split across Red Bull, McLaren, Ferrari, and Mercedes. This showed that competitive balance was starting to return in F1.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/02_constructor_points.png" alt="Constructor Points">
+        <div class="chart-info">
+          <h3>Constructor Championship Points</h3>
+          <p>Red Bull scored 790 points in 2023 — more than double of Mercedes who were in 2nd place. In 2024 they finished 3rd with 537, behind McLaren (609) and Ferrari (595).</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/03_redbull_dominance.png" alt="Dominance Metrics">
+        <div class="chart-info">
+          <h3>Red Bull Dominance Metrics</h3>
+          <p>Win rate dropped from 95.5% to 37.5%. Points share of the entire field dropped from 35.2% to 22%. This quantifies the sheer scale of the competitive swing.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/04_cumulative_points.png" alt="Cumulative Points">
+        <div class="chart-info">
+          <h3>Cumulative Constructor Points — Race by Race</h3>
+          <p>In 2023 Red Bull's line shoots away from the field almost immediately. But in 2024 the top 4 teams track closely together for the entire season.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/05_driver_points_race_by_race.png" alt="Driver Points">
+        <div class="chart-info">
+          <h3>Driver Championship Battle</h3>
+          <p>Verstappen's 2023 lead kept increasing relentlessly. But in 2024 Norris and Leclerc stayed within striking distance for much longer before Verstappen finally got ahead.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/06_points_gap_to_leader.png" alt="Points Gap">
+        <div class="chart-info">
+          <h3>Points Gap to Championship Leader</h3>
+          <p>This shows how far Verstappen's rivals fell behind him after each round. The gap curves downward steeply in 2023 but in 2024 competitors stay comparatively nearer to 0 throughout.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/07_verstappen_positions_heatmap.png" alt="Verstappen Heatmap">
+        <div class="chart-info">
+          <h3>Verstappen Finishing Position Heatmap</h3>
+          <p>A green/red heatmap of every race across both seasons. 2023 is almost entirely green. But 2024 shows more variation, including a DNF and several P4-P6 finishes.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/08_win_distribution_pie.png" alt="Win Distribution">
+        <div class="chart-info">
+          <h3>Race Win Distribution</h3>
+          <p>The 2023 chart is almost completely Red Bull with a tiny Ferrari slice. The 2024 chart is split 4 ways. This simple visual is enough to tell the whole story of F1's shift.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/09_grid_vs_finish.png" alt="Grid vs Finish">
+        <div class="chart-info">
+          <h3>Grid Position vs Finish Position</h3>
+          <p>Blue dots (Red Bull) are isolated in the bottom and mostly in the left in 2023 which means they always qualified and finished at the front. In 2024 they start mixing into the gray field.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <img src="charts/10_driver_consistency.png" alt="Driver Consistency">
+        <div class="chart-info">
+          <h3>Driver Finishing Consistency</h3>
+          <p>Verstappen's box is the tightest and leftmost in 2023, and still leftmost in 2024. Pérez's box widens dramatically in 2024. This suggests that his inconsistent driving was a big reason why Red Bull lost the constructors title.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CODE -->
+<section id="code" class="code-section" style="padding: 40px 0;">
+  <div class="container">
+    <div class="section-tag">Source Code</div>
+    <h2 class="section-title">Full Python Scripts</h2>
+    <p class="section-sub">
+      These are all the scripts that I used in this project — from data collection to advanced analysis. Click tabs to switch between files.
+    </p>
+
+    <div class="code-tabs">
+      <button class="code-tab active" onclick="switchTab('collection')">01_data_collection.py</button>
+      <button class="code-tab" onclick="switchTab('cleaning')">02_data_cleaning.py</button>
+      <button class="code-tab" onclick="switchTab('eda')">03_eda.py</button>
+      <button class="code-tab" onclick="switchTab('advanced')">04_advanced_analysis.py</button>
+    </div>
+
+    <!-- COLLECTION -->
+    <div class="code-panel active" id="tab-collection">
+      <div class="code-header">
+        <span class="code-filename"><span>01_data_collection.py</span> — used FastF1 API for safe batch download and creating CSV backups</span>
+        <button class="copy-btn" onclick="copyCode('collection')">Copy</button>
+      </div>
+      <div class="code-scroll">
+        <pre id="code-collection"><span class="kw">import</span> fastf1
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> os
+<span class="kw">import</span> time
+
+<span class="cm"># First I enable caching so that any session data is not redownloaded</span>
+fastf1.Cache.<span class="fn">enable_cache</span>(<span class="st">"cache"</span>)
+
+SEASONS = [<span class="nm">2023</span>, <span class="nm">2024</span>]
+
+<span class="kw">def</span> <span class="fn">load_session_safe</span>(year, round_num, session_type):
+    <span class="cm"># Loaded each session safely. If there is a failure then instead of crashing the function retuns None</span>
+    <span class="kw">try</span>:
+        session = fastf1.<span class="fn">get_session</span>(year, round_num, session_type)
+        session.<span class="fn">load</span>()
+        <span class="bi">print</span>(<span class="st">f"   Loaded {year} Round {round_num}"</span>)
+        <span class="kw">return</span> session
+    <span class="kw">except</span> Exception <span class="kw">as</span> e:
+        <span class="bi">print</span>(<span class="st">f"   Failed {year} Round {round_num}: {e}"</span>)
+        <span class="kw">return</span> <span class="nm">None</span>
+
+<span class="kw">def</span> <span class="fn">extract_race_results</span>(session, year, round_num):
+    <span class="cm"># Extracted the race results and added context columns</span>
+    <span class="kw">try</span>:
+        results = session.results.<span class="fn">copy</span>()
+        results[<span class="st">'Year'</span>]      = year
+        results[<span class="st">'Round'</span>]     = round_num
+        results[<span class="st">'EventName'</span>] = session.event[<span class="st">'EventName'</span>]
+        results[<span class="st">'Country'</span>]   = session.event[<span class="st">'Country'</span>]
+        <span class="kw">return</span> results
+    <span class="kw">except</span> Exception <span class="kw">as</span> e:
+        <span class="bi">print</span>(<span class="st">f"   Could not extract results: {e}"</span>)
+        <span class="kw">return</span> <span class="nm">None</span>
+
+all_race_results = []
+
+<span class="kw">for</span> year <span class="kw">in</span> SEASONS:
+    schedule = fastf1.<span class="fn">get_event_schedule</span>(year, include_testing=<span class="nm">False</span>)
+    total_rounds = <span class="bi">len</span>(schedule)
+    <span class="bi">print</span>(<span class="st">f"\nSeason {year} — {total_rounds} rounds"</span>)
+
+    <span class="kw">for</span> round_num <span class="kw">in</span> <span class="bi">range</span>(<span class="nm">1</span>, total_rounds + <span class="nm">1</span>):
+        backup_path = <span class="st">f"data/backups/{year}_round{round_num:02d}_results.csv"</span>
+
+        <span class="cm"># If session data already downloaded then skip</span>
+        <span class="kw">if</span> os.path.<span class="fn">exists</span>(backup_path):
+            <span class="bi">print</span>(<span class="st">f"  Round {round_num} — already saved, skipping"</span>)
+            <span class="kw">continue</span>
+
+        race_session = <span class="fn">load_session_safe</span>(year, round_num, <span class="st">'R'</span>)
+
+        <span class="kw">if</span> race_session <span class="kw">is not</span> <span class="nm">None</span>:
+            results = <span class="fn">extract_race_results</span>(race_session, year, round_num)
+            <span class="kw">if</span> results <span class="kw">is not</span> <span class="nm">None</span>:
+                all_race_results.<span class="fn">append</span>(results)
+                results.<span class="fn">to_csv</span>(backup_path, index=<span class="nm">False</span>)
+                <span class="bi">print</span>(<span class="st">f"   Backup saved: {backup_path}"</span>)
+
+        time.<span class="fn">sleep</span>(<span class="nm">5</span>)  <span class="cm"># Enabled a safety delay to avoid rate limits</span>
+
+<span class="cm"># Combined all rounds into a master CSV file</span>
+<span class="kw">if</span> all_race_results:
+    master = pd.<span class="fn">concat</span>(all_race_results, ignore_index=<span class="nm">True</span>)
+    master.<span class="fn">to_csv</span>(<span class="st">"data/raw/master_race_results.csv"</span>, index=<span class="nm">False</span>)
+    <span class="bi">print</span>(<span class="st">f"Master results saved: {len(master)} rows"</span>)</pre>
+      </div>
+    </div>
+
+    <!-- CLEANING -->
+    <div class="code-panel" id="tab-cleaning">
+      <div class="code-header">
+        <span class="code-filename"><span>02_data_cleaning.py</span> — removed nulls, fixed types, standardized teams and some basic feature engineering</span>
+        <button class="copy-btn" onclick="copyCode('cleaning')">Copy</button>
+      </div>
+      <div class="code-scroll">
+        <pre id="code-cleaning"><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+
+df = pd.<span class="fn">read_csv</span>(<span class="st">"data/raw/master_race_results.csv"</span>)
+<span class="bi">print</span>(<span class="st">f"Raw shape: {df.shape}"</span>)
+
+<span class="cm"># Dropped the columns that are completely null or irrelevant</span>
+cols_to_drop = [
+    <span class="st">'BroadcastName'</span>, <span class="st">'TeamColor'</span>, <span class="st">'HeadshotUrl'</span>,
+    <span class="st">'CountryCode'</span>, <span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>,
+    <span class="st">'TeamId'</span>, <span class="st">'DriverId'</span>
+]
+df = df.<span class="fn">drop</span>(columns=cols_to_drop)
+
+<span class="cm"># Renamed all columns to follow snake_case convention</span>
+df = df.<span class="fn">rename</span>(columns={
+    <span class="st">'DriverNumber'</span>      : <span class="st">'driver_number'</span>,
+    <span class="st">'Abbreviation'</span>      : <span class="st">'driver_code'</span>,
+    <span class="st">'FirstName'</span>         : <span class="st">'first_name'</span>,
+    <span class="st">'LastName'</span>          : <span class="st">'last_name'</span>,
+    <span class="st">'FullName'</span>          : <span class="st">'driver_name'</span>,
+    <span class="st">'TeamName'</span>          : <span class="st">'team'</span>,
+    <span class="st">'Position'</span>          : <span class="st">'finish_position'</span>,
+    <span class="st">'ClassifiedPosition'</span>: <span class="st">'classified_position'</span>,
+    <span class="st">'GridPosition'</span>      : <span class="st">'grid_position'</span>,
+    <span class="st">'Time'</span>              : <span class="st">'race_time'</span>,
+    <span class="st">'Status'</span>            : <span class="st">'status'</span>,
+    <span class="st">'Points'</span>            : <span class="st">'points'</span>,
+    <span class="st">'Laps'</span>              : <span class="st">'laps_completed'</span>,
+    <span class="st">'Year'</span>              : <span class="st">'year'</span>,
+    <span class="st">'Round'</span>             : <span class="st">'round'</span>,
+    <span class="st">'EventName'</span>         : <span class="st">'race_name'</span>,
+    <span class="st">'Country'</span>           : <span class="st">'country'</span>,
+})
+
+<span class="cm"># Fixed data types</span>
+df[<span class="st">'finish_position'</span>] = pd.<span class="fn">to_numeric</span>(df[<span class="st">'finish_position'</span>], errors=<span class="st">'coerce'</span>)
+df[<span class="st">'grid_position'</span>]   = pd.<span class="fn">to_numeric</span>(df[<span class="st">'grid_position'</span>],   errors=<span class="st">'coerce'</span>)
+df[<span class="st">'points'</span>]          = pd.<span class="fn">to_numeric</span>(df[<span class="st">'points'</span>],          errors=<span class="st">'coerce'</span>).<span class="fn">fillna</span>(<span class="nm">0</span>)
+df[<span class="st">'year'</span>]            = df[<span class="st">'year'</span>].<span class="fn">astype</span>(<span class="bi">int</span>)
+df[<span class="st">'round'</span>]           = df[<span class="st">'round'</span>].<span class="fn">astype</span>(<span class="bi">int</span>)
+
+<span class="cm"># Standardized team names for both seasons</span>
+team_name_map = {
+    <span class="st">'Alfa Romeo'</span> : <span class="st">'Sauber'</span>,
+    <span class="st">'AlphaTauri'</span> : <span class="st">'RB F1 Team'</span>,
+}
+df[<span class="st">'team'</span>] = df[<span class="st">'team'</span>].<span class="fn">replace</span>(team_name_map)
+
+<span class="cm"># Made DNF counts more accurate by counting only mechanical/accident retirements</span>
+DNF_STATUSES = [<span class="st">'Retired'</span>, <span class="st">'Accident'</span>, <span class="st">'Collision damage'</span>, <span class="st">'Undertray'</span>, <span class="st">'Withdrew'</span>]
+DNS_STATUSES = [<span class="st">'Did not start'</span>]
+
+df[<span class="st">'dnf'</span>]             = df[<span class="st">'status'</span>].<span class="fn">isin</span>(DNF_STATUSES)
+df[<span class="st">'dns'</span>]             = df[<span class="st">'status'</span>].<span class="fn">isin</span>(DNS_STATUSES)
+df[<span class="st">'finished'</span>]        = ~df[<span class="st">'dnf'</span>] &amp; ~df[<span class="st">'dns'</span>]
+df[<span class="st">'is_redbull'</span>]      = df[<span class="st">'team'</span>] == <span class="st">'Red Bull'</span>
+df[<span class="st">'positions_gained'</span>] = df[<span class="st">'grid_position'</span>] - df[<span class="st">'finish_position'</span>]
+df[<span class="st">'points_finish'</span>]   = df[<span class="st">'points'</span>] > <span class="nm">0</span>
+
+df.<span class="fn">to_csv</span>(<span class="st">"data/cleaned/master_results_cleaned.csv"</span>, index=<span class="nm">False</span>)
+<span class="bi">print</span>(<span class="st">f"Cleaned data saved: {df.shape}"</span>)</pre>
+      </div>
+    </div>
+
+    <!-- EDA -->
+    <div class="code-panel" id="tab-eda">
+      <div class="code-header">
+        <span class="code-filename"><span>03_eda.py</span> — charts displaying wins, constructor points, Red Bull dominance metrics and cumulative points</span>
+        <button class="copy-btn" onclick="copyCode('eda')">Copy</button>
+      </div>
+      <div class="code-scroll">
+        <pre id="code-eda"><span class="kw">import</span> matplotlib
+matplotlib.<span class="fn">use</span>(<span class="st">'Agg'</span>)  <span class="cm"># This saves charts without opening windows which makes the terminal run faster</span>
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
+<span class="kw">import</span> matplotlib.ticker <span class="kw">as</span> ticker
+<span class="kw">import</span> os
+
+df = pd.<span class="fn">read_csv</span>(<span class="st">"data/cleaned/master_results_cleaned.csv"</span>)
+os.<span class="fn">makedirs</span>(<span class="st">"outputs/charts"</span>, exist_ok=<span class="nm">True</span>)
+
+COLORS = {
+    <span class="st">'Red Bull'</span>      : <span class="st">'#3671C6'</span>,
+    <span class="st">'Ferrari'</span>       : <span class="st">'#E8002D'</span>,
+    <span class="st">'Mercedes'</span>      : <span class="st">'#27F4D2'</span>,
+    <span class="st">'McLaren'</span>       : <span class="st">'#FF8000'</span>,
+    <span class="st">'Aston Martin'</span>  : <span class="st">'#229971'</span>,
+    <span class="st">'Alpine F1 Team'</span>: <span class="st">'#FF87BC'</span>,
+    <span class="st">'Williams'</span>      : <span class="st">'#64C4FF'</span>,
+    <span class="st">'RB F1 Team'</span>    : <span class="st">'#6692FF'</span>,
+    <span class="st">'Haas F1 Team'</span>  : <span class="st">'#B6BABD'</span>,
+    <span class="st">'Sauber'</span>        : <span class="st">'#52E252'</span>,
+}
+
+<span class="cm"># wins per team</span>
+winners      = df[df[<span class="st">'finish_position'</span>] == <span class="nm">1</span>]
+wins_by_team = winners.<span class="fn">groupby</span>([<span class="st">'year'</span>, <span class="st">'team'</span>]).<span class="fn">size</span>().<span class="fn">reset_index</span>(name=<span class="st">'wins'</span>)
+
+fig, axes = plt.<span class="fn">subplots</span>(<span class="nm">1</span>, <span class="nm">2</span>, figsize=(<span class="nm">14</span>, <span class="nm">6</span>))
+fig.<span class="fn">suptitle</span>(<span class="st">'Race Wins by Team — 2023 vs 2024'</span>, fontsize=<span class="nm">16</span>, fontweight=<span class="st">'bold'</span>)
+
+<span class="kw">for</span> i, year <span class="kw">in</span> <span class="bi">enumerate</span>([<span class="nm">2023</span>, <span class="nm">2024</span>]):
+    data   = wins_by_team[wins_by_team[<span class="st">'year'</span>] == year].<span class="fn">sort_values</span>(<span class="st">'wins'</span>, ascending=<span class="nm">True</span>)
+    colors = [COLORS.<span class="fn">get</span>(t, <span class="st">'#888'</span>) <span class="kw">for</span> t <span class="kw">in</span> data[<span class="st">'team'</span>]]
+    axes[i].<span class="fn">barh</span>(data[<span class="st">'team'</span>], data[<span class="st">'wins'</span>], color=colors)
+    axes[i].<span class="fn">set_title</span>(<span class="st">f'{year} Season'</span>)
+
+plt.<span class="fn">tight_layout</span>()
+plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/01_wins_by_team.png'</span>, dpi=<span class="nm">150</span>, bbox_inches=<span class="st">'tight'</span>)
+
+<span class="cm"># constructor points</span>
+team_points = df.<span class="fn">groupby</span>([<span class="st">'year'</span>, <span class="st">'team'</span>])[<span class="st">'points'</span>].<span class="fn">sum</span>().<span class="fn">reset_index</span>()
+
+<span class="cm"># Red Bull dominance metrics</span>
+rb_wins    = df[(df[<span class="st">'is_redbull'</span>]==<span class="nm">True</span>) &amp; (df[<span class="st">'finish_position'</span>]==<span class="nm">1</span>)].<span class="fn">groupby</span>(<span class="st">'year'</span>).<span class="fn">size</span>()
+rb_points  = df[df[<span class="st">'is_redbull'</span>]==<span class="nm">True</span>].<span class="fn">groupby</span>(<span class="st">'year'</span>)[<span class="st">'points'</span>].<span class="fn">sum</span>()
+ttl_points = df.<span class="fn">groupby</span>(<span class="st">'year'</span>)[<span class="st">'points'</span>].<span class="fn">sum</span>()
+ttl_races  = df.<span class="fn">groupby</span>(<span class="st">'year'</span>)[<span class="st">'round'</span>].<span class="fn">nunique</span>()
+
+dominance = pd.<span class="fn">DataFrame</span>({
+    <span class="st">'rb_wins'</span>        : rb_wins,
+    <span class="st">'rb_win_pct'</span>     : (rb_wins / ttl_races * <span class="nm">100</span>).<span class="fn">round</span>(<span class="nm">1</span>),
+    <span class="st">'rb_points_share'</span>: (rb_points / ttl_points * <span class="nm">100</span>).<span class="fn">round</span>(<span class="nm">1</span>),
+}).<span class="fn">reset_index</span>()
+
+<span class="cm"># cumulative constructor points</span>
+top_teams = team_points[team_points[<span class="st">'year'</span>]==<span class="nm">2023</span>].<span class="fn">nlargest</span>(<span class="nm">5</span>, <span class="st">'points'</span>)[<span class="st">'team'</span>].<span class="fn">tolist</span>()
+
+fig, axes = plt.<span class="fn">subplots</span>(<span class="nm">1</span>, <span class="nm">2</span>, figsize=(<span class="nm">16</span>, <span class="nm">6</span>))
+<span class="kw">for</span> i, year <span class="kw">in</span> <span class="bi">enumerate</span>([<span class="nm">2023</span>, <span class="nm">2024</span>]):
+    year_df = df[df[<span class="st">'year'</span>] == year]
+    <span class="kw">for</span> team <span class="kw">in</span> top_teams:
+        rp = year_df[year_df[<span class="st">'team'</span>]==team].<span class="fn">groupby</span>(<span class="st">'round'</span>)[<span class="st">'points'</span>].<span class="fn">sum</span>().<span class="fn">reset_index</span>()
+        rp[<span class="st">'cumulative'</span>] = rp[<span class="st">'points'</span>].<span class="fn">cumsum</span>()
+        axes[i].<span class="fn">plot</span>(rp[<span class="st">'round'</span>], rp[<span class="st">'cumulative'</span>],
+                     color=COLORS.<span class="fn">get</span>(team, <span class="st">'#888'</span>), label=team, linewidth=<span class="nm">2</span>)
+
+plt.<span class="fn">tight_layout</span>()
+plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/04_cumulative_points.png'</span>, dpi=<span class="nm">150</span>, bbox_inches=<span class="st">'tight'</span>)</pre>
+      </div>
+    </div>
+
+    <!-- ADVANCED -->
+    <div class="code-panel" id="tab-advanced">
+      <div class="code-header">
+        <span class="code-filename"><span>04_advanced_analysis.py</span> — charts showing driver battles, Verstappen finishes heatmap, position change scatterplot and driver consistency boxplot</span>
+        <button class="copy-btn" onclick="copyCode('advanced')">Copy</button>
+      </div>
+      <div class="code-scroll">
+        <pre id="code-advanced"><span class="kw">import</span> matplotlib
+matplotlib.<span class="fn">use</span>(<span class="st">'Agg'</span>)
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
+<span class="kw">import</span> seaborn <span class="kw">as</span> sns
+
+df = pd.<span class="fn">read_csv</span>(<span class="st">"data/cleaned/master_results_cleaned.csv"</span>)
+
+DRIVER_COLORS = {
+    <span class="st">'VER'</span>: <span class="st">'#3671C6'</span>, <span class="st">'NOR'</span>: <span class="st">'#FF8000'</span>,
+    <span class="st">'LEC'</span>: <span class="st">'#E8002D'</span>, <span class="st">'HAM'</span>: <span class="st">'#27F4D2'</span>, <span class="st">'PER'</span>: <span class="st">'#9B59B6'</span>
+}
+
+<span class="cm"># cumulative driver points — Verstappen vs rivals</span>
+top_drivers = [<span class="st">'VER'</span>, <span class="st">'NOR'</span>, <span class="st">'LEC'</span>, <span class="st">'HAM'</span>, <span class="st">'PER'</span>]
+
+fig, axes = plt.<span class="fn">subplots</span>(<span class="nm">1</span>, <span class="nm">2</span>, figsize=(<span class="nm">18</span>, <span class="nm">7</span>))
+<span class="kw">for</span> i, year <span class="kw">in</span> <span class="bi">enumerate</span>([<span class="nm">2023</span>, <span class="nm">2024</span>]):
+    year_df = df[df[<span class="st">'year'</span>] == year]
+    <span class="kw">for</span> drv <span class="kw">in</span> top_drivers:
+        drv_df = year_df[year_df[<span class="st">'driver_code'</span>] == drv].<span class="fn">sort_values</span>(<span class="st">'round'</span>)
+        <span class="kw">if</span> <span class="bi">len</span>(drv_df) == <span class="nm">0</span>: <span class="kw">continue</span>
+        drv_df = drv_df.<span class="fn">copy</span>()
+        drv_df[<span class="st">'cumulative_pts'</span>] = drv_df[<span class="st">'points'</span>].<span class="fn">cumsum</span>()
+        axes[i].<span class="fn">plot</span>(drv_df[<span class="st">'round'</span>], drv_df[<span class="st">'cumulative_pts'</span>],
+                     marker=<span class="st">'o'</span>, markersize=<span class="nm">3</span>, linewidth=<span class="nm">2</span>,
+                     color=DRIVER_COLORS[drv], label=drv)
+
+plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/05_driver_points_race_by_race.png'</span>, dpi=<span class="nm">150</span>)
+
+<span class="cm"># Verstappen heatmap</span>
+fig, axes = plt.<span class="fn">subplots</span>(<span class="nm">2</span>, <span class="nm">1</span>, figsize=(<span class="nm">18</span>, <span class="nm">8</span>))
+<span class="kw">for</span> i, year <span class="kw">in</span> <span class="bi">enumerate</span>([<span class="nm">2023</span>, <span class="nm">2024</span>]):
+    ver_df    = df[(df[<span class="st">'driver_code'</span>]==<span class="st">'VER'</span>) &amp; (df[<span class="st">'year'</span>]==year)].<span class="fn">sort_values</span>(<span class="st">'round'</span>)
+    positions = ver_df[<span class="st">'finish_position'</span>].values.<span class="fn">reshape</span>(<span class="nm">1</span>, -<span class="nm">1</span>)
+    axes[i].<span class="fn">imshow</span>(positions, cmap=<span class="st">'RdYlGn_r'</span>, aspect=<span class="st">'auto'</span>, vmin=<span class="nm">1</span>, vmax=<span class="nm">20</span>)
+    <span class="kw">for</span> j, pos <span class="kw">in</span> <span class="bi">enumerate</span>(ver_df[<span class="st">'finish_position'</span>].values):
+        axes[i].<span class="fn">text</span>(j, <span class="nm">0</span>, <span class="bi">str</span>(<span class="bi">int</span>(pos)), ha=<span class="st">'center'</span>, va=<span class="st">'center'</span>,
+                    fontsize=<span class="nm">9</span>, fontweight=<span class="st">'bold'</span>)
+
+plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/07_verstappen_positions_heatmap.png'</span>, dpi=<span class="nm">150</span>)
+
+<span class="cm"># grid vs finish scatter ──</span>
+fig, axes = plt.<span class="fn">subplots</span>(<span class="nm">1</span>, <span class="nm">2</span>, figsize=(<span class="nm">14</span>, <span class="nm">6</span>))
+<span class="kw">for</span> i, year <span class="kw">in</span> <span class="bi">enumerate</span>([<span class="nm">2023</span>, <span class="nm">2024</span>]):
+    year_df = df[df[<span class="st">'year'</span>]==year].<span class="fn">dropna</span>(subset=[<span class="st">'grid_position'</span>, <span class="st">'finish_position'</span>])
+    rb      = year_df[year_df[<span class="st">'is_redbull'</span>]==<span class="nm">True</span>]
+    rest    = year_df[year_df[<span class="st">'is_redbull'</span>]==<span class="nm">False</span>]
+    axes[i].<span class="fn">scatter</span>(rest[<span class="st">'grid_position'</span>], rest[<span class="st">'finish_position'</span>],
+                    alpha=<span class="nm">0.4</span>, color=<span class="st">'#888'</span>, s=<span class="nm">30</span>, label=<span class="st">'Rest of field'</span>)
+    axes[i].<span class="fn">scatter</span>(rb[<span class="st">'grid_position'</span>], rb[<span class="st">'finish_position'</span>],
+                    alpha=<span class="nm">0.9</span>, color=<span class="st">'#3671C6'</span>, s=<span class="nm">60</span>, label=<span class="st">'Red Bull'</span>, zorder=<span class="nm">5</span>)
+    axes[i].<span class="fn">plot</span>([<span class="nm">1</span>, <span class="nm">20</span>], [<span class="nm">1</span>, <span class="nm">20</span>], <span class="st">'k--'</span>, alpha=<span class="nm">0.3</span>)
+
+plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/09_grid_vs_finish.png'</span>, dpi=<span class="nm">150</span>)
+
+<span class="cm"># driver consistency boxplot</span>
+top_drivers_full = [
+    <span class="st">'Max Verstappen'</span>, <span class="st">'Lando Norris'</span>, <span class="st">'Charles Leclerc'</span>,
+    <span class="st">'Carlos Sainz'</span>, <span class="st">'Lewis Hamilton'</span>, <span class="st">'George Russell'</span>,
+    <span class="st">'Sergio Pérez'</span>, <span class="st">'Oscar Piastri'</span>
+]
+
+fig, axes = plt.<span class="fn">subplots</span>(<span class="nm">1</span>, <span class="nm">2</span>, figsize=(<span class="nm">16</span>, <span class="nm">7</span>))
+<span class="kw">for</span> i, year <span class="kw">in</span> <span class="bi">enumerate</span>([<span class="nm">2023</span>, <span class="nm">2024</span>]):
+    year_df = df[(df[<span class="st">'year'</span>]==year) &amp; (df[<span class="st">'driver_name'</span>].<span class="fn">isin</span>(top_drivers_full))]
+    order   = year_df.<span class="fn">groupby</span>(<span class="st">'driver_name'</span>)[<span class="st">'finish_position'</span>].<span class="fn">median</span>().<span class="fn">sort_values</span>().index
+    sns.<span class="fn">boxplot</span>(data=year_df, x=<span class="st">'finish_position'</span>, y=<span class="st">'driver_name'</span>,
+                order=order, ax=axes[i], palette=<span class="st">'viridis'</span>)
+    axes[i].<span class="fn">axvline</span>(x=<span class="nm">10.5</span>, color=<span class="st">'red'</span>, linestyle=<span class="st">'--'</span>, alpha=<span class="nm">0.3</span>)
+
+plt.<span class="fn">savefig</span>(<span class="st">'outputs/charts/10_driver_consistency.png'</span>, dpi=<span class="nm">150</span>)</pre>
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; text-align: center;">
+      <a href="https://github.com/your-repo-link-here" target="_blank" class="github-repo-btn">
+        View Full Project on GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <div class="container">
+    <div class="section-tag">Key Findings</div>
+    <h2 class="section-title">What The Data Says</h2>
+    <p class="section-sub">
+      I managed to extract 6 major insights from the 2023 and 2024 Formula 1 race datasets.
+    </p>
+
+    <div class="insights-grid">
+
+      <div class="insight-card">
+        <div class="insight-num">1</div>
+        <h3>Historic 2023 Dominance</h3>
+        <p>Red Bull's 2023 campaign is statistically one of the most dominant campaigns ever in F1 history. Winning 21 of 22 races with a 95.5% win rate and claiming 35.2% of all points scored by every team combined. No other constructor came close.</p>
+        <span class="insight-stat">21/22 wins · 790 pts · 35.2% share</span>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">2</div>
+        <h3>McLaren's Championship Turnaround</h3>
+        <p>McLaren went from equal 5th in 2023 (266 points, matching Aston Martin) to constructors' champions in 2024 with 609 points. This is the biggest single-season points jump of any team in the field.</p>
+        <span class="insight-stat">266 pts in 2023 → 609 pts in 2024</span>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">3</div>
+        <h3>Verstappen's Personal Resilience</h3>
+        <p>Inspite of being in a significantly slower car in 2024, Verstappen still won the drivers' championship (his 4th consecutive title). His average finish dropped from 1.27 to 3.63 but he still defeated all his rivals through consistency and race craft.</p>
+        <span class="insight-stat">Avg finish: 1.27 → 3.63 · Still champion</span>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">4</div>
+        <h3>Pérez Collapse Cost Red Bull the Title</h3>
+        <p>Sergio Pérez scored 260 points in 2023 as a strong number 2 driver. But in 2024 he dropped to 138 which was a 47% reduction. His wide finishing position boxplot shows how inconsistent he was and that directly cost Red Bull the constructors championship in 2024.</p>
+        <span class="insight-stat">260 pts → 138 pts · –47%</span>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">5</div>
+        <h3>McLaren's Zero DNF Season</h3>
+        <p>McLaren completed 2024 with absolutely no DNFs. Both McLarens finished every single race they started. Combined with their pace advantage in the second half of the season, this reliability was critical to their constructors title win.</p>
+        <span class="insight-stat">0 DNFs across 48 race starts in 2024</span>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">6</div>
+        <h3>Win Share Tells the Full Story</h3>
+        <p>Red Bull's points share fell from 35.2% to 22% of all points scored across the field. 4 different teams won races in 2024 compared to just 2 in 2023. Formula 1 went from a one-team show to its most competitive season in years.</p>
+        <span class="insight-stat">4 race-winning teams in 2024 vs 2 in 2023</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section>
+  <div class="container">
+    <div class="section-tag">Tools Used</div>
+    <h2 class="section-title">Tech Stack</h2>
+    <p class="section-sub">These are all the tools that I used across the full analytics pipeline.</p>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-icon">🐍</div>
+        <h4>Python 3.10</h4>
+        <p>Core language for all data processing and analysis</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🏎️</div>
+        <h4>FastF1</h4>
+        <p>Official F1 API wrapper for race data collection</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🐼</div>
+        <h4>Pandas</h4>
+        <p>Data cleaning, transformation, and aggregation</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📊</div>
+        <h4>Matplotlib</h4>
+        <p>Primary charting library for all visualizations</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🎨</div>
+        <h4>Seaborn</h4>
+        <p>Statistical charts — boxplots and distribution plots</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🔢</div>
+        <h4>NumPy</h4>
+        <p>Numerical operations and array handling</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">💾</div>
+        <h4>CSV / Backups</h4>
+        <p>Backup strategy for every race to handle API rate limits</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📐</div>
+        <h4>Feature Engineering</h4>
+        <p>DNF flags, positions gained, points share KPIs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="section-tag">About</div>
+    <h2 class="section-title">Who Built This</h2>
+    <p class="section-sub">
+      Here's myself — the analyst behind the project — background, skills, and other work.
+    </p>
+
+    <div class="about-grid">
+
+      <div class="about-left">
+        <div class="about-avatar">SM</div>
+        <h3>Shounak Mukherjee</h3>
+        <div class="about-role">Aspiring Data & Business Analyst</div>
+
+        <div class="about-meta">
+          <div class="about-meta-item">
+            <span>🎓</span>
+            <span>B.Tech CSE — IEM Kolkata (2023–present)</span>
+          </div>
+          <div class="about-meta-item">
+            <span>📍</span>
+            <span>Kolkata, India</span>
+          </div>
+          <div class="about-meta-item">
+            <span>✍️</span>
+            <span>Content Writing Intern — Mobile Gaming Head</span>
+          </div>
+          <div class="about-meta-item">
+            <span>🏎️</span>
+            <span>Interests: Music · Long Drives · Motorsports</span>
+          </div>
+        </div>
+
+        <div class="about-links">
+          <a href="https://linkedin.com/in/check-out-shounak-mukherjee" class="about-link" target="_blank">
+            <span>💼</span> LinkedIn Profile
+          </a>
+          <a href="mailto:mukherjeeshounak05@gmail.com" class="about-link">
+            <span>📧</span> mukherjeeshounak05@gmail.com
+          </a>
+          <a href="https://github.com/codenak" class="about-link" target="_blank">
+            <span>🐙</span> GitHub Profile
+          </a>
+        </div>
+      </div>
+
+      <div class="about-right">
+
+        <h3>Background</h3>
+        <p>
+          I'm a Computer Science & Engineering student at the Institute of Engineering and Management, Kolkata. I am actively building a career in data and business analytics. I have hands-on experience in data cleaning, visualization, and business insight generation using Excel, Power BI, MySQL, and Python. I have also been writing content professionally for over 2 years now that has helped strengthen my communication skills, analytical thinking, and ability to turn complex data into clear narratives.
+        </p>
+
+        <h3>Skills</h3>
+        <div class="skills-list">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Excel & Power Query</span>
+          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">DAX</span>
+          <span class="skill-tag">CTEs & Window Functions</span>
+          <span class="skill-tag">RFM Segmentation</span>
+          <span class="skill-tag">Matplotlib & Seaborn</span>
+          <span class="skill-tag">FastF1 API</span>
+          <span class="skill-tag">Sports Analytics</span>
+        </div>
+
+        <h3>Other Projects</h3>
+        <div class="other-projects">
+
+          <a href="https://github.com/codenak/ecommerce-sales-analysis-mysql" class="proj-card" target="_blank">
+            <h4>E-Commerce Sales & Customer Analysis</h4>
+            <p>Analyzed 640K+ row UCI Online Retail II dataset using MySQL. RFM customer segmentation, month-over-month revenue trend analysis using CTEs, window functions, and stored procedures.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">RFM Segmentation</span>
+              <span class="proj-tag">Window Functions</span>
+              <span class="proj-tag">640K rows</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/codenak/addiction_analysis_excel_powerbi" class="proj-card" target="_blank">
+            <h4>Cigarettes & Alcohol Addiction Analysis</h4>
+            <p>Built a 1-page interactive Power BI report on a 3,000-row addiction and health dataset. Covered demographics, addiction behavior, lifestyle factors, and therapy outcomes using DAX measures.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Power BI</span>
+              <span class="proj-tag">DAX</span>
+              <span class="proj-tag">Excel</span>
+              <span class="proj-tag">Power Query</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/codenak/world_layoffs_cleaning_sql" class="proj-card" target="_blank">
+            <h4>SQL Data Cleaning — World Layoffs Dataset</h4>
+            <p>Cleaned 3,000+ row dataset using MySQL — removed 300+ duplicates, resolved 98% nulls, and standardized fields using CTEs, temp tables, and complex join queries.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Data Cleaning</span>
+              <span class="proj-tag">CTEs</span>
+              <span class="proj-tag">Temp Tables</span>
+            </div>
+          </a>
+
+        </div>
+
+        <h3>Forage Simulations</h3>
+        <div class="skills-list">
+          <span class="skill-tag"><a href = "https://www.theforage.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_uuBPuJTwxCN4G9nGs_1716495836369_completion_certificate.pdf" target="_blank">Accenture — Data Analytics & Visualization</a></span>
+          <span class="skill-tag"><a href = "https://www.theforage.com/completion-certificates/P2whMfgG9v48cqWwx/nTAAtHcgiQddMMgo8_P2whMfgG9v48cqWwx_uuBPuJTwxCN4G9nGs_1748286677373_completion_certificate.pdf" target="_blank">Red Bull — Off-Premise Sales Analysis</a></span>
+          <span class="skill-tag"><a href = "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_uuBPuJTwxCN4G9nGs_1748275851572_completion_certificate.pdf" target="_blank">TATA — Data Visualisation</a></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-stripe"></div>
+<footer>
+  <div class="container footer-inner">
+    <p>F1 Red Bull Dominance Analysis — Shounak Mukherjee · 2025</p>
+    <p>Built with Python · FastF1 · Pandas · Matplotlib · Seaborn</p>
+    <p>Partially coded by Claude and ChatGPT</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <button class="modal-close" id="modal-close">&times;</button>
+  <img id="modal-img" src="" alt="">
+</div>
+
+<script>
+  // ── IMAGE MODAL ──
+  const modal     = document.getElementById('modal');
+  const modalImg  = document.getElementById('modal-img');
+  const modalClose= document.getElementById('modal-close');
+
+  document.querySelectorAll('.chart-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      modal.classList.add('open');
+      modalImg.src = img.src;
+    });
+  });
+
+  modalClose.addEventListener('click', () => modal.classList.remove('open'));
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+
+  // ── CODE TABS ──
+  function switchTab(name) {
+    document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.code-panel').forEach(p => p.classList.remove('active'));
+
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // ── COPY CODE ──
+  function copyCode(name) {
+    const pre  = document.getElementById('code-' + name);
+    const text = pre.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = event.target;
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+  }
+</script>
+
+</body>
+</html>

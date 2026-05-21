@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,1.0,,,,0 days 01:25:33.607000,Finished,26.0,71.0,2023,9,Austrian Grand Prix,Austria
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,2.0,2,2.0,,,,0 days 00:00:05.155000,Finished,18.0,71.0,2023,9,Austrian Grand Prix,Austria
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,3.0,3,15.0,,,,0 days 00:00:17.188000,Finished,15.0,71.0,2023,9,Austrian Grand Prix,Austria
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,4.0,4,4.0,,,,0 days 00:00:26.327000,Finished,12.0,71.0,2023,9,Austrian Grand Prix,Austria
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,5.0,5,7.0,,,,0 days 00:00:30.317000,Finished,10.0,71.0,2023,9,Austrian Grand Prix,Austria
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,6.0,6,3.0,,,,0 days 00:00:31.377000,Finished,8.0,71.0,2023,9,Austrian Grand Prix,Austria
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,7.0,7,11.0,,,,0 days 00:00:48.403000,Finished,6.0,71.0,2023,9,Austrian Grand Prix,Austria
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,8.0,8,5.0,,,,0 days 00:00:49.196000,Finished,4.0,71.0,2023,9,Austrian Grand Prix,Austria
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,9.0,9,6.0,,,,0 days 00:00:59.043000,Finished,2.0,71.0,2023,9,Austrian Grand Prix,Austria
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,10.0,10,9.0,,,,0 days 00:01:07.667000,Finished,1.0,71.0,2023,9,Austrian Grand Prix,Austria
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,11.0,11,10.0,,,,0 days 00:01:19.767000,Finished,0.0,71.0,2023,9,Austrian Grand Prix,Austria
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,12.0,12,17.0,,,,0 days 00:00:24.633000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,13.0,13,18.0,,,,0 days 00:00:31.384000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,14.0,14,12.0,,,,0 days 00:00:42.140000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,15.0,15,14.0,,,,0 days 00:00:42.777000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,16.0,16,13.0,,,,0 days 00:00:46.569000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+21,,DEV,de_vries,AlphaTauri,,alphatauri,Nyck,de Vries,Nyck de Vries,,,17.0,17,20.0,,,,0 days 00:00:49.703000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,18.0,18,19.0,,,,0 days 00:00:56.653000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,19.0,19,16.0,,,,0 days 00:00:59.873000,Lapped,0.0,70.0,2023,9,Austrian Grand Prix,Austria
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,20.0,R,8.0,,,,,Retired,0.0,12.0,2023,9,Austrian Grand Prix,Austria

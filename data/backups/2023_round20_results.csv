@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,1.0,,,,0 days 01:56:48.894000,Finished,25.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,2.0,2,6.0,,,,0 days 00:00:08.277000,Finished,19.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,3.0,3,4.0,,,,0 days 00:00:34.155000,Finished,15.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,4.0,4,9.0,,,,0 days 00:00:34.208000,Finished,12.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,5.0,5,3.0,,,,0 days 00:00:40.845000,Finished,10.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,6.0,6,7.0,,,,0 days 00:00:50.188000,Finished,8.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,7.0,7,15.0,,,,0 days 00:00:56.093000,Finished,6.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,8.0,8,5.0,,,,0 days 00:01:02.859000,Finished,4.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,9.0,9,16.0,,,,0 days 00:01:09.880000,Finished,2.0,71.0,2023,20,São Paulo Grand Prix,Brazil
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,10.0,10,14.0,,,,0 days 00:00:09.841000,Lapped,1.0,70.0,2023,20,São Paulo Grand Prix,Brazil
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,11.0,11,19.0,,,,0 days 00:00:26.208000,Lapped,0.0,70.0,2023,20,São Paulo Grand Prix,Brazil
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,12.0,12,11.0,,,,0 days 00:00:29.960000,Lapped,0.0,70.0,2023,20,São Paulo Grand Prix,Brazil
+3,,RIC,ricciardo,AlphaTauri,,alphatauri,Daniel,Ricciardo,Daniel Ricciardo,,,13.0,13,17.0,,,,0 days 00:01:09.961000,Lapped,0.0,70.0,2023,20,São Paulo Grand Prix,Brazil
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,14.0,14,10.0,,,,0 days 00:00:03.636000,Lapped,0.0,69.0,2023,20,São Paulo Grand Prix,Brazil
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,15.0,R,8.0,,,,,Retired,0.0,57.0,2023,20,São Paulo Grand Prix,Brazil
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,16.0,R,18.0,,,,,Retired,0.0,39.0,2023,20,São Paulo Grand Prix,Brazil
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,17.0,R,20.0,,,,,Retired,0.0,22.0,2023,20,São Paulo Grand Prix,Brazil
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,18.0,R,12.0,,,,,Retired,0.0,0.0,2023,20,São Paulo Grand Prix,Brazil
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,19.0,R,13.0,,,,,Retired,0.0,0.0,2023,20,São Paulo Grand Prix,Brazil
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,20.0,W,2.0,,,,,Did not start,0.0,0.0,2023,20,São Paulo Grand Prix,Brazil

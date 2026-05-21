@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,1.0,1,1.0,,,,0 days 01:40:52.571000,Finished,25.0,62.0,2024,18,Singapore Grand Prix,Singapore
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,2.0,2,2.0,,,,0 days 00:00:20.945000,Finished,18.0,62.0,2024,18,Singapore Grand Prix,Singapore
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,3.0,3,5.0,,,,0 days 00:00:41.823000,Finished,15.0,62.0,2024,18,Singapore Grand Prix,Singapore
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,4.0,4,4.0,,,,0 days 00:01:01.040000,Finished,12.0,62.0,2024,18,Singapore Grand Prix,Singapore
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,5.0,5,9.0,,,,0 days 00:01:02.430000,Finished,10.0,62.0,2024,18,Singapore Grand Prix,Singapore
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,6.0,6,3.0,,,,0 days 00:01:25.248000,Finished,8.0,62.0,2024,18,Singapore Grand Prix,Singapore
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,7.0,7,10.0,,,,0 days 00:01:36.039000,Finished,6.0,62.0,2024,18,Singapore Grand Prix,Singapore
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,8.0,8,7.0,,,,0 days 00:00:00.873000,Lapped,4.0,61.0,2024,18,Singapore Grand Prix,Singapore
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,9.0,9,6.0,,,,0 days 00:00:03.140000,Lapped,2.0,61.0,2024,18,Singapore Grand Prix,Singapore
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,10.0,10,13.0,,,,0 days 00:00:04.624000,Lapped,1.0,61.0,2024,18,Singapore Grand Prix,Singapore
+43,,COL,colapinto,Williams,,williams,Franco,Colapinto,Franco Colapinto,,,11.0,11,12.0,,,,0 days 00:00:06.284000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,12.0,12,8.0,,,,0 days 00:00:08.792000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,13.0,13,15.0,,,,0 days 00:00:44.005000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,14.0,14,17.0,,,,0 days 00:00:47.571000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,15.0,15,20.0,,,,0 days 00:00:57.220000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,16.0,16,19.0,,,,0 days 00:00:57.829000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,17.0,17,18.0,,,,0 days 00:00:59.059000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,18.0,18,16.0,,,,0 days 00:01:29.796000,Lapped,0.0,61.0,2024,18,Singapore Grand Prix,Singapore
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,19.0,19,14.0,,,,,Retired,0.0,57.0,2024,18,Singapore Grand Prix,Singapore
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,20.0,R,11.0,,,,,Retired,0.0,15.0,2024,18,Singapore Grand Prix,Singapore

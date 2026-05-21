@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,1.0,1,2.0,,,,0 days 01:32:58.007000,Finished,25.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,2.0,2,1.0,,,,0 days 00:00:10.910000,Finished,18.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,3.0,3,5.0,,,,0 days 00:00:31.328000,Finished,15.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,4.0,4,15.0,,,,0 days 00:00:36.143000,Finished,13.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,5.0,5,6.0,,,,0 days 00:01:17.098000,Finished,10.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,6.0,6,7.0,,,,0 days 00:01:25.468000,Finished,8.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,7.0,7,9.0,,,,0 days 00:01:27.396000,Finished,6.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+43,,COL,colapinto,Williams,,williams,Franco,Colapinto,Franco Colapinto,,,8.0,8,8.0,,,,0 days 00:01:29.541000,Finished,4.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,9.0,9,19.0,,,,0 days 00:01:32.401000,Finished,2.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+50,,BEA,bearman,Haas F1 Team,,haas,Oliver,Bearman,Oliver Bearman,,,10.0,10,10.0,,,,0 days 00:01:33.127000,Finished,1.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,11.0,11,12.0,,,,0 days 00:01:33.465000,Finished,0.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,12.0,12,18.0,,,,0 days 00:01:57.189000,Finished,0.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,13.0,13,14.0,,,,0 days 00:02:26.907000,Finished,0.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,14.0,14,17.0,,,,0 days 00:02:28.841000,Finished,0.0,51.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,15.0,15,20.0,,,,0 days 00:00:21.344000,Lapped,0.0,50.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,16.0,16,16.0,,,,0 days 00:00:25.395000,Lapped,0.0,50.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,17.0,17,4.0,,,,,Retired,0.0,49.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,18.0,18,3.0,,,,,Retired,0.0,49.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,19.0,19,13.0,,,,,Retired,0.0,45.0,2024,17,Azerbaijan Grand Prix,Azerbaijan
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,20.0,R,11.0,,,,,Retired,0.0,14.0,2024,17,Azerbaijan Grand Prix,Azerbaijan

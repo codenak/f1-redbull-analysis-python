@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,2.0,,,,0 days 01:45:47.927000,Finished,25.0,70.0,2024,9,Canadian Grand Prix,Canada
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,2.0,2,3.0,,,,0 days 00:00:03.879000,Finished,18.0,70.0,2024,9,Canadian Grand Prix,Canada
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,3.0,3,1.0,,,,0 days 00:00:04.317000,Finished,15.0,70.0,2024,9,Canadian Grand Prix,Canada
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,4.0,4,7.0,,,,0 days 00:00:04.915000,Finished,13.0,70.0,2024,9,Canadian Grand Prix,Canada
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,5.0,5,4.0,,,,0 days 00:00:10.199000,Finished,10.0,70.0,2024,9,Canadian Grand Prix,Canada
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,6.0,6,6.0,,,,0 days 00:00:17.510000,Finished,8.0,70.0,2024,9,Canadian Grand Prix,Canada
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,7.0,7,9.0,,,,0 days 00:00:23.625000,Finished,6.0,70.0,2024,9,Canadian Grand Prix,Canada
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,8.0,8,5.0,,,,0 days 00:00:28.672000,Finished,4.0,70.0,2024,9,Canadian Grand Prix,Canada
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,9.0,9,15.0,,,,0 days 00:00:30.021000,Finished,2.0,70.0,2024,9,Canadian Grand Prix,Canada
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,10.0,10,18.0,,,,0 days 00:00:30.313000,Finished,1.0,70.0,2024,9,Canadian Grand Prix,Canada
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,11.0,11,17.0,,,,0 days 00:00:30.824000,Finished,0.0,70.0,2024,9,Canadian Grand Prix,Canada
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,12.0,12,14.0,,,,0 days 00:00:31.253000,Finished,0.0,70.0,2024,9,Canadian Grand Prix,Canada
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,13.0,13,19.0,,,,0 days 00:00:40.487000,Finished,0.0,70.0,2024,9,Canadian Grand Prix,Canada
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,14.0,14,8.0,,,,0 days 00:00:52.694000,Finished,0.0,70.0,2024,9,Canadian Grand Prix,Canada
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,15.0,15,20.0,,,,0 days 00:00:53.528000,Lapped,0.0,69.0,2024,9,Canadian Grand Prix,Canada
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,16.0,R,12.0,,,,,Retired,0.0,52.0,2024,9,Canadian Grand Prix,Canada
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,17.0,R,10.0,,,,,Retired,0.0,52.0,2024,9,Canadian Grand Prix,Canada
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,18.0,R,16.0,,,,,Retired,0.0,51.0,2024,9,Canadian Grand Prix,Canada
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,19.0,R,11.0,,,,,Retired,0.0,40.0,2024,9,Canadian Grand Prix,Canada
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,20.0,R,13.0,,,,,Retired,0.0,23.0,2024,9,Canadian Grand Prix,Canada

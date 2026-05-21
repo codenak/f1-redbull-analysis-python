@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,1.0,1,1.0,,,,0 days 01:30:45.519000,Finished,26.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,2.0,2,2.0,,,,0 days 00:00:22.896000,Finished,18.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,3.0,3,6.0,,,,0 days 00:00:25.439000,Finished,15.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,4.0,4,3.0,,,,0 days 00:00:27.337000,Finished,12.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,5.0,5,10.0,,,,0 days 00:00:32.137000,Finished,10.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,6.0,6,5.0,,,,0 days 00:00:39.542000,Finished,8.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,7.0,7,4.0,,,,0 days 00:00:44.617000,Finished,6.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,8.0,8,14.0,,,,0 days 00:00:49.599000,Finished,4.0,72.0,2024,15,Dutch Grand Prix,Netherlands
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,9.0,9,9.0,,,,0 days 00:00:08.604000,Lapped,2.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,10.0,10,7.0,,,,0 days 00:00:13.533000,Lapped,1.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,11.0,11,12.0,,,,0 days 00:00:19.214000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,12.0,12,13.0,,,,0 days 00:00:21.067000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,13.0,13,8.0,,,,0 days 00:00:25.712000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,14.0,14,19.0,,,,0 days 00:00:40.711000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,15.0,15,15.0,,,,0 days 00:00:46.878000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,16.0,16,18.0,,,,0 days 00:01:04.539000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,17.0,17,11.0,,,,0 days 00:01:05.146000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,18.0,18,20.0,,,,0 days 00:01:05.707000,Lapped,0.0,71.0,2024,15,Dutch Grand Prix,Netherlands
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,19.0,19,16.0,,,,0 days 00:00:03.248000,Lapped,0.0,70.0,2024,15,Dutch Grand Prix,Netherlands
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,20.0,20,17.0,,,,0 days 00:00:36.019000,Lapped,0.0,70.0,2024,15,Dutch Grand Prix,Netherlands

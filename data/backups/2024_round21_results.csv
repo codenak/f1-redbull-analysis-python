@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,17.0,,,,0 days 02:06:54.430000,Finished,26.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,2.0,2,4.0,,,,0 days 00:00:19.477000,Finished,18.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,3.0,3,13.0,,,,0 days 00:00:22.532000,Finished,15.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,4.0,4,2.0,,,,0 days 00:00:23.265000,Finished,12.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,5.0,5,6.0,,,,0 days 00:00:30.177000,Finished,10.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,6.0,6,1.0,,,,0 days 00:00:31.372000,Finished,8.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,7.0,7,3.0,,,,0 days 00:00:42.056000,Finished,6.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,8.0,8,8.0,,,,0 days 00:00:44.943000,Finished,4.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+30,,LAW,lawson,RB F1 Team,,rb,Liam,Lawson,Liam Lawson,,,9.0,9,5.0,,,,0 days 00:00:50.452000,Finished,2.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,10.0,10,14.0,,,,0 days 00:00:50.753000,Finished,1.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,11.0,11,12.0,,,,0 days 00:00:51.531000,Finished,0.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+50,,BEA,bearman,Haas F1 Team,,haas,Oliver,Bearman,Oliver Bearman,,,12.0,12,15.0,,,,0 days 00:00:57.085000,Finished,0.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,13.0,13,11.0,,,,0 days 00:01:03.588000,Finished,0.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,14.0,14,9.0,,,,0 days 00:01:18.049000,Finished,0.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,15.0,15,19.0,,,,0 days 00:01:19.649000,Finished,0.0,69.0,2024,21,São Paulo Grand Prix,Brazil
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,16.0,R,20.0,,,,,Retired,0.0,38.0,2024,21,São Paulo Grand Prix,Brazil
+43,,COL,colapinto,Williams,,williams,Franco,Colapinto,Franco Colapinto,,,17.0,R,16.0,,,,,Retired,0.0,30.0,2024,21,São Paulo Grand Prix,Brazil
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,18.0,W,7.0,,,,,Did not start,0.0,0.0,2024,21,São Paulo Grand Prix,Brazil
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,19.0,W,10.0,,,,,Did not start,0.0,0.0,2024,21,São Paulo Grand Prix,Brazil
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,20.0,D,18.0,,,,,Disqualified,0.0,0.0,2024,21,São Paulo Grand Prix,Brazil

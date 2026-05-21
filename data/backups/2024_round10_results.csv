@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,2.0,,,,0 days 01:28:20.227000,Finished,25.0,66.0,2024,10,Spanish Grand Prix,Spain
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,2.0,2,1.0,,,,0 days 00:00:02.219000,Finished,19.0,66.0,2024,10,Spanish Grand Prix,Spain
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,3.0,3,3.0,,,,0 days 00:00:17.790000,Finished,15.0,66.0,2024,10,Spanish Grand Prix,Spain
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,4.0,4,4.0,,,,0 days 00:00:22.320000,Finished,12.0,66.0,2024,10,Spanish Grand Prix,Spain
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,5.0,5,5.0,,,,0 days 00:00:22.709000,Finished,10.0,66.0,2024,10,Spanish Grand Prix,Spain
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,6.0,6,6.0,,,,0 days 00:00:31.028000,Finished,8.0,66.0,2024,10,Spanish Grand Prix,Spain
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,7.0,7,9.0,,,,0 days 00:00:33.760000,Finished,6.0,66.0,2024,10,Spanish Grand Prix,Spain
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,8.0,8,11.0,,,,0 days 00:00:59.524000,Finished,4.0,66.0,2024,10,Spanish Grand Prix,Spain
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,9.0,9,7.0,,,,0 days 00:01:02.025000,Finished,2.0,66.0,2024,10,Spanish Grand Prix,Spain
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,10.0,10,8.0,,,,0 days 00:01:11.889000,Finished,1.0,66.0,2024,10,Spanish Grand Prix,Spain
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,11.0,11,13.0,,,,0 days 00:01:19.215000,Finished,0.0,66.0,2024,10,Spanish Grand Prix,Spain
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,12.0,12,10.0,,,,0 days 00:00:09.497000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,13.0,13,15.0,,,,0 days 00:00:15.476000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,14.0,14,14.0,,,,0 days 00:00:25.252000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,15.0,15,18.0,,,,0 days 00:00:44.050000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,16.0,16,12.0,,,,0 days 00:00:53.313000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,17.0,17,16.0,,,,0 days 00:00:54.788000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,18.0,18,20.0,,,,0 days 00:00:58.149000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,19.0,19,17.0,,,,0 days 00:01:08.904000,Lapped,0.0,65.0,2024,10,Spanish Grand Prix,Spain
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,20.0,20,19.0,,,,0 days 00:00:04.866000,Lapped,0.0,64.0,2024,10,Spanish Grand Prix,Spain

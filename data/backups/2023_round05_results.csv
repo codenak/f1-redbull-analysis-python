@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,1.0,1,9.0,,,,0 days 01:27:38.241000,Finished,26.0,57.0,2023,5,Miami Grand Prix,United States
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,2.0,2,1.0,,,,0 days 00:00:05.384000,Finished,18.0,57.0,2023,5,Miami Grand Prix,United States
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,3.0,3,2.0,,,,0 days 00:00:26.305000,Finished,15.0,57.0,2023,5,Miami Grand Prix,United States
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,4.0,4,6.0,,,,0 days 00:00:33.229000,Finished,12.0,57.0,2023,5,Miami Grand Prix,United States
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,5.0,5,3.0,,,,0 days 00:00:42.511000,Finished,10.0,57.0,2023,5,Miami Grand Prix,United States
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,6.0,6,13.0,,,,0 days 00:00:51.249000,Finished,8.0,57.0,2023,5,Miami Grand Prix,United States
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,7.0,7,7.0,,,,0 days 00:00:52.988000,Finished,6.0,57.0,2023,5,Miami Grand Prix,United States
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,8.0,8,5.0,,,,0 days 00:00:55.670000,Finished,4.0,57.0,2023,5,Miami Grand Prix,United States
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,9.0,9,8.0,,,,0 days 00:00:58.123000,Finished,2.0,57.0,2023,5,Miami Grand Prix,United States
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,10.0,10,4.0,,,,0 days 00:01:02.945000,Finished,1.0,57.0,2023,5,Miami Grand Prix,United States
+22,,TSU,tsunoda,AlphaTauri,,alphatauri,Yuki,Tsunoda,Yuki Tsunoda,,,11.0,11,17.0,,,,0 days 00:01:04.309000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,12.0,12,18.0,,,,0 days 00:01:04.754000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+77,,BOT,bottas,Alfa Romeo,,alfa,Valtteri,Bottas,Valtteri Bottas,,,13.0,13,10.0,,,,0 days 00:01:11.637000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,14.0,14,11.0,,,,0 days 00:01:12.861000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,15.0,15,12.0,,,,0 days 00:01:14.950000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+24,,ZHO,zhou,Alfa Romeo,,alfa,Guanyu,Zhou,Guanyu Zhou,,,16.0,16,14.0,,,,0 days 00:01:18.440000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,17.0,17,16.0,,,,0 days 00:01:27.717000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+21,,DEV,de_vries,AlphaTauri,,alphatauri,Nyck,de Vries,Nyck de Vries,,,18.0,18,15.0,,,,0 days 00:01:28.949000,Finished,0.0,57.0,2023,5,Miami Grand Prix,United States
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,19.0,19,19.0,,,,0 days 00:00:20.510000,Lapped,0.0,56.0,2023,5,Miami Grand Prix,United States
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,20.0,20,20.0,,,,0 days 00:00:34.388000,Lapped,0.0,56.0,2023,5,Miami Grand Prix,United States

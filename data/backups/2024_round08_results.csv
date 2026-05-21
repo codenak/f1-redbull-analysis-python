@@ -1,0 +1,21 @@
+DriverNumber,BroadcastName,Abbreviation,DriverId,TeamName,TeamColor,TeamId,FirstName,LastName,FullName,HeadshotUrl,CountryCode,Position,ClassifiedPosition,GridPosition,Q1,Q2,Q3,Time,Status,Points,Laps,Year,Round,EventName,Country
+16,,LEC,leclerc,Ferrari,,ferrari,Charles,Leclerc,Charles Leclerc,,,1.0,1,1.0,,,,0 days 02:23:15.554000,Finished,25.0,78.0,2024,8,Monaco Grand Prix,Monaco
+81,,PIA,piastri,McLaren,,mclaren,Oscar,Piastri,Oscar Piastri,,,2.0,2,2.0,,,,0 days 00:00:07.152000,Finished,18.0,78.0,2024,8,Monaco Grand Prix,Monaco
+55,,SAI,sainz,Ferrari,,ferrari,Carlos,Sainz,Carlos Sainz,,,3.0,3,3.0,,,,0 days 00:00:07.585000,Finished,15.0,78.0,2024,8,Monaco Grand Prix,Monaco
+4,,NOR,norris,McLaren,,mclaren,Lando,Norris,Lando Norris,,,4.0,4,4.0,,,,0 days 00:00:08.650000,Finished,12.0,78.0,2024,8,Monaco Grand Prix,Monaco
+63,,RUS,russell,Mercedes,,mercedes,George,Russell,George Russell,,,5.0,5,5.0,,,,0 days 00:00:13.309000,Finished,10.0,78.0,2024,8,Monaco Grand Prix,Monaco
+1,,VER,max_verstappen,Red Bull,,red_bull,Max,Verstappen,Max Verstappen,,,6.0,6,6.0,,,,0 days 00:00:13.853000,Finished,8.0,78.0,2024,8,Monaco Grand Prix,Monaco
+44,,HAM,hamilton,Mercedes,,mercedes,Lewis,Hamilton,Lewis Hamilton,,,7.0,7,7.0,,,,0 days 00:00:14.908000,Finished,7.0,78.0,2024,8,Monaco Grand Prix,Monaco
+22,,TSU,tsunoda,RB F1 Team,,rb,Yuki,Tsunoda,Yuki Tsunoda,,,8.0,8,8.0,,,,0 days 00:00:39.487000,Lapped,4.0,77.0,2024,8,Monaco Grand Prix,Monaco
+23,,ALB,albon,Williams,,williams,Alexander,Albon,Alexander Albon,,,9.0,9,9.0,,,,0 days 00:00:54.052000,Lapped,2.0,77.0,2024,8,Monaco Grand Prix,Monaco
+10,,GAS,gasly,Alpine F1 Team,,alpine,Pierre,Gasly,Pierre Gasly,,,10.0,10,10.0,,,,0 days 00:01:00.241000,Lapped,1.0,77.0,2024,8,Monaco Grand Prix,Monaco
+14,,ALO,alonso,Aston Martin,,aston_martin,Fernando,Alonso,Fernando Alonso,,,11.0,11,14.0,,,,0 days 00:00:03.854000,Lapped,0.0,76.0,2024,8,Monaco Grand Prix,Monaco
+3,,RIC,ricciardo,RB F1 Team,,rb,Daniel,Ricciardo,Daniel Ricciardo,,,12.0,12,12.0,,,,0 days 00:00:04.264000,Lapped,0.0,76.0,2024,8,Monaco Grand Prix,Monaco
+77,,BOT,bottas,Sauber,,sauber,Valtteri,Bottas,Valtteri Bottas,,,13.0,13,17.0,,,,0 days 00:00:04.488000,Lapped,0.0,76.0,2024,8,Monaco Grand Prix,Monaco
+18,,STR,stroll,Aston Martin,,aston_martin,Lance,Stroll,Lance Stroll,,,14.0,14,13.0,,,,0 days 00:00:05.967000,Lapped,0.0,76.0,2024,8,Monaco Grand Prix,Monaco
+2,,SAR,sargeant,Williams,,williams,Logan,Sargeant,Logan Sargeant,,,15.0,15,15.0,,,,0 days 00:00:09.026000,Lapped,0.0,76.0,2024,8,Monaco Grand Prix,Monaco
+24,,ZHO,zhou,Sauber,,sauber,Guanyu,Zhou,Guanyu Zhou,,,16.0,16,18.0,,,,0 days 00:00:55.260000,Lapped,0.0,76.0,2024,8,Monaco Grand Prix,Monaco
+31,,OCO,ocon,Alpine F1 Team,,alpine,Esteban,Ocon,Esteban Ocon,,,17.0,R,11.0,,,,,Retired,0.0,0.0,2024,8,Monaco Grand Prix,Monaco
+11,,PER,perez,Red Bull,,red_bull,Sergio,Pérez,Sergio Pérez,,,18.0,R,16.0,,,,,Retired,0.0,0.0,2024,8,Monaco Grand Prix,Monaco
+27,,HUL,hulkenberg,Haas F1 Team,,haas,Nico,Hülkenberg,Nico Hülkenberg,,,19.0,R,19.0,,,,,Retired,0.0,0.0,2024,8,Monaco Grand Prix,Monaco
+20,,MAG,kevin_magnussen,Haas F1 Team,,haas,Kevin,Magnussen,Kevin Magnussen,,,20.0,R,20.0,,,,,Retired,0.0,0.0,2024,8,Monaco Grand Prix,Monaco
