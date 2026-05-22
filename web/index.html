@@ -945,7 +945,7 @@
       </h1>
 
       <p class="hero-desc">
-        A complete end-to-end Python analytics project telling the story of Red Bull Racing's historic 2023 dominance and the emergence of a multi-team championship fight in 2024. Built with FastF1, Pandas, Matplotlib, and Seaborn across 46 races and 919 data points.
+        A complete end-to-end Python analytics project examining one of the most dramatic competitive shifts in recent Formula 1 history — Red Bull Racing's near-perfect 2023 season and the collapse of that dominance in 2024. Built with FastF1, Pandas, Matplotlib, and Seaborn across 46 races, 919 data points, and two very different championship stories.
       </p>
 
       <div class="hero-buttons">
@@ -979,9 +979,9 @@
 <section id="overview">
   <div class="container">
     <div class="section-tag">Project Overview</div>
-    <h2 class="section-title">What did i actually analyze ?</h2>
+    <h2 class="section-title">What's This Project Actually About?</h2>
     <p class="section-sub">
-      In this project I have covered two complete Formula 1 seasons — 2023 and 2024 — using race result data collected from the FastF1 API. The goal is to quantify Red Bull's dominance in 2023 and measure how the competitive landscape shifted in 2024.
+      In 2023, Red Bull Racing won 21 out of 22 Formula 1 races — a 95.5% win rate. It was one of the most statistically dominant campaigns in the F1 history. But the next year they only won 9 races, finished 3rd in the constructors championship, and were being outpaced by 3 different teams on any given weekend. In this project I have collected, cleaned, and analyzed real race result data from both seasons to put precise numbers on that collapse — when it started, how severe it was, and which teams closed the gap.
     </p>
 
     <div class="stats-row">
@@ -1120,7 +1120,7 @@
         <img src="charts/01_wins_by_team.png" alt="Wins By Team">
         <div class="chart-info">
           <h3>Race Wins by Team — 2023 vs 2024</h3>
-          <p>In 2023 Red Bull won 21 of 22 races. In 2024 the wins got split across Red Bull, McLaren, Ferrari, and Mercedes. This showed that competitive balance was starting to return in F1.</p>
+          <p>This is the most direct summary of what changed. One bar chart tells you everything about the 2023 season, and one tells you everything about 2024. In 2023 Red Bull won 21 of 22 races. In 2024 the wins got split across Red Bull, McLaren, Ferrari, and Mercedes. This showed that competitive balance was starting to return in F1.</p>
         </div>
       </div>
 
@@ -1128,7 +1128,7 @@
         <img src="charts/02_constructor_points.png" alt="Constructor Points">
         <div class="chart-info">
           <h3>Constructor Championship Points</h3>
-          <p>Red Bull scored 790 points in 2023 — more than double of Mercedes who were in 2nd place. In 2024 they finished 3rd with 537, behind McLaren (609) and Ferrari (595).</p>
+          <p>The main thing that matters in F1 is points. This shows the actual championship scoring gap between Red Bull and the rest of the field across both seasons. Red Bull scored 790 points in 2023 — more than double of Mercedes who were in 2nd place. In 2024 they finished 3rd with 537, behind McLaren (609) and Ferrari (595).</p>
         </div>
       </div>
 
@@ -1136,7 +1136,7 @@
         <img src="charts/03_redbull_dominance.png" alt="Dominance Metrics">
         <div class="chart-info">
           <h3>Red Bull Dominance Metrics</h3>
-          <p>Win rate dropped from 95.5% to 37.5%. Points share of the entire field dropped from 35.2% to 22%. This quantifies the sheer scale of the competitive swing.</p>
+          <p>There are 2 metrics that can draw a very clear picture of the whole situation here — the percentage of races won by Red Bull, and the percentage of all points scored by every team combined that Red Bull actually scored. Win rate dropped from 95.5% to 37.5%. Points share of the entire field dropped from 35.2% to 22%. This quantifies the sheer scale of the competitive swing.</p>
         </div>
       </div>
 
@@ -1144,7 +1144,7 @@
         <img src="charts/04_cumulative_points.png" alt="Cumulative Points">
         <div class="chart-info">
           <h3>Cumulative Constructor Points — Race by Race</h3>
-          <p>In 2023 Red Bull's line shoots away from the field almost immediately. But in 2024 the top 4 teams track closely together for the entire season.</p>
+          <p>Instead of a single total, this plot tracks how points accumulated race by race — so you can see exactly when Red Bull pulled away in 2023 and exactly how differently the 2024 season unfolded. In 2023 Red Bull's line shoots away from the field almost immediately. But in 2024 the top 4 teams track closely together for the entire season.</p>
         </div>
       </div>
 
@@ -1152,7 +1152,7 @@
         <img src="charts/05_driver_points_race_by_race.png" alt="Driver Points">
         <div class="chart-info">
           <h3>Driver Championship Battle</h3>
-          <p>Verstappen's 2023 lead kept increasing relentlessly. But in 2024 Norris and Leclerc stayed within striking distance for much longer before Verstappen finally got ahead.</p>
+          <p>This one is a bit of a personal comparison between Max Verstappen and his closest rivals, round by round, across both seasons. Verstappen's 2023 lead kept increasing relentlessly. But in 2024 Norris and Leclerc stayed within striking distance for much longer before Verstappen finally got ahead.</p>
         </div>
       </div>
 
@@ -1160,7 +1160,7 @@
         <img src="charts/06_points_gap_to_leader.png" alt="Points Gap">
         <div class="chart-info">
           <h3>Points Gap to Championship Leader</h3>
-          <p>This shows how far Verstappen's rivals fell behind him after each round. The gap curves downward steeply in 2023 but in 2024 competitors stay comparatively nearer to 0 throughout.</p>
+          <p>This is kind of the opposite of Chart 5. Instead of showing total points, this shows how far behind the leader each driver was after every round. The steeper the drop, the more dominant the leader. The gap curves downward steeply in 2023 but in 2024 competitors stay comparatively nearer to 0 throughout.</p>
         </div>
       </div>
 
@@ -1168,7 +1168,7 @@
         <img src="charts/07_verstappen_positions_heatmap.png" alt="Verstappen Heatmap">
         <div class="chart-info">
           <h3>Verstappen Finishing Position Heatmap</h3>
-          <p>A green/red heatmap of every race across both seasons. 2023 is almost entirely green. But 2024 shows more variation, including a DNF and several P4-P6 finishes.</p>
+          <p>Here every box is one race of Verstappen. Green means he won or finished on the podium. Red means a bad result. It basically summarizes his whole 2023 and 2024 seasons. 2023 is almost entirely green. But 2024 shows more variation, including a DNF and several P4-P6 finishes.</p>
         </div>
       </div>
 
@@ -1176,7 +1176,7 @@
         <img src="charts/08_win_distribution_pie.png" alt="Win Distribution">
         <div class="chart-info">
           <h3>Race Win Distribution</h3>
-          <p>The 2023 chart is almost completely Red Bull with a tiny Ferrari slice. The 2024 chart is split 4 ways. This simple visual is enough to tell the whole story of F1's shift.</p>
+          <p>This is probably the simplest chart in the project but also the most powerful one. The 2023 chart is almost completely Red Bull with a tiny Ferrari slice. The 2024 chart is split 4 ways. This simple visual is enough to tell the whole story of F1's shift.</p>
         </div>
       </div>
 
@@ -1184,7 +1184,7 @@
         <img src="charts/09_grid_vs_finish.png" alt="Grid vs Finish">
         <div class="chart-info">
           <h3>Grid Position vs Finish Position</h3>
-          <p>Blue dots (Red Bull) are isolated in the bottom and mostly in the left in 2023 which means they always qualified and finished at the front. In 2024 they start mixing into the gray field.</p>
+          <p>This compares where Red Bull started each race versus where they finished — plotted against the rest of the field. In 2023 those blue dots are in a completely different corner of the chart from everyone else. Blue dots (Red Bull) are isolated in the bottom and mostly in the left in 2023 which means they always qualified and finished at the front. In 2024 they start mixing into the gray field.</p>
         </div>
       </div>
 
@@ -1192,7 +1192,7 @@
         <img src="charts/10_driver_consistency.png" alt="Driver Consistency">
         <div class="chart-info">
           <h3>Driver Finishing Consistency</h3>
-          <p>Verstappen's box is the tightest and leftmost in 2023, and still leftmost in 2024. Pérez's box widens dramatically in 2024. This suggests that his inconsistent driving was a big reason why Red Bull lost the constructors title.</p>
+          <p>In F1 the key to winning a championship is considered to be consistency. This chart shows the spread of finishing positions for the top 8 drivers — a narrow box means reliable results, a wide box means unreliability. Verstappen's box is the tightest and leftmost in 2023, and still leftmost in 2024. Pérez's box widens dramatically in 2024. This suggests that his inconsistent driving was a big reason why Red Bull lost the constructors title.</p>
         </div>
       </div>
 
